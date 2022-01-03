@@ -1,88 +1,91 @@
-body {
-    margin: 0px 200px;
-    margin-bottom: 50px;
-}
-
-header {
-    background-image: url("./img/pattern.webp");
-    font-family: Helvetica;
-    font-size: 50px;
-    font-weight: bold;
-    color: khaki;
-    text-align: center;
-    margin: 0px 0px 0px 0px;
-}
-
-h1 {
-    margin: 0px 0px 0px 0px;
-}
-
-h2 {
-    font-family: Helvetica;
-    font-size: 32px;
-    font-weight: bold;
-    color: white;
-    display: block;
-    width: 100%;
-    float: left;
-}
-
-h3 {}
-
-#brushes h2 {
-    background-color: mediumspringgreen;
-}
-
-#frames h2 {
-    background-color: lightcoral;
-}
-
-#paint h2 {
-    background-color: skyblue;
-}
-
-h3 {
-    font-size: 35px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif
-}
-
-#brushes h3 {
-    color: mediumspringgreen;
-}
-
-#frames h3 {
-    color: lightcoral;
-}
-
-#paint h3 {
-    color: skyblue;
-}
-
-strong {
-    font-family: Helvetica;
-    font-weight: bold;
-    color: blue;
-}
-
-img {
-    display: block;
-    float: left;
-    padding-right: 2%;
-}
-
-section {
-    display: block;
-    float: left;
-}
-
-p {
-    font-size: 25px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
-}
-
-footer {
-    float: left;
-    height: 100px;
-    width: 100%;
-    background-color: white;
-}
+    body {
+        margin: 0px 200px;
+        margin-bottom: 50px;
+    }
+    
+    header {
+        background-image: url("./img/pattern.webp");
+        font-family: Helvetica;
+        font-size: 50px;
+        font-weight: bold;
+        color: khaki;
+        text-align: center;
+        margin: 0px 0px 0px 0px;
+    }
+    
+    h1 {
+        margin: 0px 0px 0px 0px;
+    }
+    
+    h2 {
+        font-family: Helvetica;
+        font-size: 32px;
+        font-weight: bold;
+        color: white;
+        width: 100%;
+        text-align: center;
+    }
+    
+    #brushes h2 {
+        background-color: mediumspringgreen;
+    }
+    
+    #frames h2 {
+        background-color: lightcoral;
+    }
+    
+    #paint h2 {
+        background-color: skyblue;
+    }
+    
+    h3 {
+        font-size: 35px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    
+    #brushes h3 {
+        color: mediumspringgreen;
+    }
+    
+    #frames h3 {
+        color: lightcoral;
+    }
+    
+    #paint h3 {
+        color: skyblue;
+    }
+    
+    strong {
+        font-family: Helvetica;
+        font-weight: bold;
+        color: blue;
+    }
+    
+    p {
+        font-size: 25px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+    }
+    
+    footer {
+        height: 100px;
+        width: 100%;
+        background-color: white;
+    }
+    
+    img {
+        max-height: 250px;
+        max-width: 250px;
+    }
+    
+    #container {
+        display: flex;
+        column-gap: 10px;
+        flex-flow: column;
+        justify-content: space-between;
+    }
+    
+    section {
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+    }
