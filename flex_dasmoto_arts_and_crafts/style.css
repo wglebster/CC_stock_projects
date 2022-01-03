@@ -81,11 +81,20 @@
         display: flex;
         column-gap: 10px;
         flex-flow: column;
-        justify-content: space-between;
+        justify-content: flex-start;
+        align-items: flex-start;
     }
     
+    h2,
+    h3,
+    p,
+    strong,
+    img,
     section {
         display: flex;
         flex-flow: column;
-        align-items: center;
+    }
+    
+    * {
+        border: solid 1px red;
     }
