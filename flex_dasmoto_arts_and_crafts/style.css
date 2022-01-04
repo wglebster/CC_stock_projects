@@ -85,11 +85,6 @@
             align-items: flex-start;
         }
         
-        h2,
-        h3,
-        p,
-        strong,
-        img,
         section {
             display: flex;
             flex-flow: column;
