@@ -8,7 +8,7 @@
 
 <body>
     <table>
-        <caption>Typography</caption>
+        <caption>Cheatsheet to make notes of hard to remember topics</caption>
         <thead>
             <tr>
                 <th scope="col">Description</th>
@@ -38,6 +38,92 @@
                 <td class="code">
                     <code> head <br> link href="https://fonts.googleapis.com/css?family=Droid%20Serif"<br> rel="stylesheet"<br> /head
                     </code>
+                </td>
+            </tr>
+            <tr>
+                <td class="description">
+                    <h3>Position: Relative</h3>This value allows you to position an element <em>relative to its default <strong>position</strong> </em> on the web page. Relative offset needs to be specified by accompanying the position declaration with one
+                    or more of the following offset properties that will move the element away from its default static position:
+                    <ul>
+                        <li>top - moves the element down from the top</li>
+                        <li>bottom - moves the element up from the bottom</li>
+                        <li>left - moves the element away from the left side (to the right)</li>
+                        <li>right - moves the element away from the right side (to the left)</li>
+                    </ul>
+                    You can specify values in pixels, ems, or percentages, among others, to dial in exactly how far you need the element to move. It’s also important to note that offset properties will not work if the element’s position property is the default static.
+                </td>
+                <td class="code"><code>
+                    .green-box {<br>
+                    background-color: green;<br>
+                    position: relative;<br>
+                    top: 50px;<br>
+                    left: 120px;<br>
+                      }
+                </code>
+                </td>
+            </tr>
+            <tr>
+                <td class="description">
+                    <h3>Position: Absolute</h3>
+                    Another way of modifying the position of an element is by setting its position to absolute. When an element's position is set to absolute, all other elements on the page will ignore the element and act like it is not present on the page. The element <em>will
+                    be positioned relative to its closest positioned parent element</em>, while offset properties can be used to determine the final position from there.
+                </td>
+                <td class="code">
+                    <code> 
+                        .green-box {<br> 
+                            background-color: green;<br> 
+                            position: absolute;<br> 
+                            top: 50px;<br> 
+                            left: 120px;<br> }
+                    </code>
+                </td>
+            </tr>
+            <tr>
+                <td class="description">
+                    <h3>Position: Fixed</h3> When an element's position is set to absolute, the element will scroll with the rest of the document when a user scrolls. We can fix an element to a specific position on the page (regardless of user scrolling)
+                    by setting its position to fixed, and accompanying it with the offset properties top, bottom, left, and right.
+                </td>
+                <td class="code">
+                    <code>
+                        .title { <br>
+                            position: fixed;<br>
+                            top: 0px; <br>
+                            left: 0px; <br>
+                          }
+                    </code>
+                </td>
+            </tr>
+            <tr>
+                <td class="description">
+                    <h3>Position: Sticky</h3>
+                    The sticky value is another position value that keeps an element in the document flow as the user scrolls, but sticks to a specified position as the page is scrolled further. This is done by using the sticky value along with the offset properties. In
+                    the example on the left, the .box-bottom <em>div</em> will remain in its relative position, and scroll as usual. When it reaches 240 pixels from the top, it will stick to that position until it reaches the bottom
+                    of its parent container where it will “unstick” and rejoin the flow of the document.
+                </td>
+                <td class="code">
+                    <code>
+                        .box-bottom { <br>
+                            background-color: darkgreen; <br>
+                            position: sticky; <br>
+                            top: 240px; <br>
+                          }
+                    </code>
+                </td>
+            </tr>
+            <tr>
+                <td class="description" colspan="2">
+                    <h3>Display: inline</h3>
+                    <p>The default display for some elements, such as <em>em/strong</em> and <em>a</em>, is called inline. Inline elements have a box that wraps tightly around their content, only taking up the amount of space necessary to display their content
+                        and not requiring a new line after each element. The height and width of these elements cannot be specified in the CSS document.</p>
+                    <p>The CSS <em>display</em> property provides the ability to make any element an inline element. This includes elements that are not inline by default such as paragraphs, divs, and headings.</p>
+
+                    <h3>Display: Block</h3>
+                    <p>Some elements are not displayed in the same line as the content around them. These are called block-level elements. These elements fill the entire width of the page by default, but their width property can also be set. Unless otherwise
+                        specified, they are the height necessary to accommodate their content.</p>
+
+                    <h3>Display: Inline-Block</h3>
+                    <p>The third value for the display property is inline-block. Inline-block display combines features of both inline and block elements. Inline-block elements can appear next to each other and we can specify their dimensions using the width
+                        and height properties. Images are the best example of default inline-block elements.</p>
                 </td>
             </tr>
         </tbody>
