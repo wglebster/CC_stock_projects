@@ -27,3 +27,7 @@
         .code {
             font-family: "Cutive Mono", Courier, monospace;
         }
+        img {
+            width: 800px;
+            display: block;
+        }
