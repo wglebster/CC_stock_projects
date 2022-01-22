@@ -352,6 +352,37 @@
                         </code>
                     </td>
                     </tr>
+                    <tr id="#">
+                        <td class="description">
+                        <h3>flex-grow</h3>
+                        <p>
+                            All flex items shrink proportionally when the flex container is too small. However, if the parent container is larger than necessary then the flex items will not stretch by default. The <code>flex-grow</code> property allows us to specify if items should grow to fill a container and also which items should grow proportionally more or less than others.<br>
+
+                            If a max-width is set for an element, it will not grow larger than that even if there is more space for it to absorb.<br>
+
+                            <code>flex-grow</code><strong> is declared on flex items.</strong> 
+                        </p>
+        
+                        <br><a href="#to-top">To Top</a>
+                        </td>
+                        <td class="code">
+                       <code>
+                        .container { <br>
+                            display: flex;<br>
+                          } <br><br>
+                           
+                          .side {<br>
+                            width: 100px;<br>
+                            flex-grow: 1;<br>
+                          }<br><br>
+                           
+                          .center {<br>
+                            width: 100px;<br>
+                            flex-grow: 2;<br>
+                          }<br><br>
+                       </code>
+                        </td>
+                        </tr>
 
             <!-- Additional row template, replace # with an appropriate ID name
                 <tr id="#">
