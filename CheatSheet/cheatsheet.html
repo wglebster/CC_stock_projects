@@ -383,6 +383,36 @@
                        </code>
                         </td>
                         </tr>
+                        <tr id="flex-basis">
+                            <td class="description">
+                            <h3>flex-basis</h3>
+                            <p>
+                                Another way of specifying the width of a flex item is with the <code>flex-basis</code> property. <code>flex-basis></code> allows us to specify the width of an item before it stretches or shrinks. <br>
+                                If the .container div is larger, the .center div will absorb twice as much space as the .side divs.
+                                The same would hold true if we assigned flex-shrink values to the divs above as well.
+                            </p>
+            
+                            <br><a href="#to-top">To Top</a>
+                            </td>
+                            <td class="code">
+                                <code>
+                                    .container { <br>
+                                        display: flex; <br>
+                                      } <br>
+                                      <br>
+                                      .side { <br>
+                                        flex-grow: 1; <br>
+                                        flex-basis: 100px; <br>
+                                      } <br>
+                                      <br>
+                                      .center { <br>
+                                        flex-grow: 2; <br>
+                                        flex-basis: 150px; <br>
+                                      } <br><br>
+                                </code>
+                           
+                            </td>
+                            </tr>
 
             <!-- Additional row template, replace # with an appropriate ID name
                 <tr id="#">
