@@ -270,7 +270,31 @@
                       } <br>
                     </code>
                 </td>
+            </tr>
+            <tr id="inline-flex">
+                <td class="description">
+                <h3>inline-flex</h3>
+                <p>If we didn’t want div elements to be block-level elements, we would use <code>display: inline</code>. Flexbox, however, provides the <code>inline-flex</code> value for the display property, which allows us to create flex containers that are also inline elements. When we change the value of the display property to inline-flex, the divs will display inline with each other if the page is wide enough.
+                the size of the flex container is set. Currently, the size of the parent container will override the size of its child elements. If the parent element is too small, the flex items will shrink to accommodate the parent container’s size.
+                </p>
+
+                <br><a href="#to-top">To Top</a>
+                </td>
+                <td class="code">
+                    <code>
+                        .container { <br>
+                            width: 200px; <br>
+                          } <br>
+                          <br>
+                           
+                          .child { <br>
+                            display: inline-flex; <br>
+                            width: 150px; <br>
+                            height: auto; <br>
+                          } <br><br>
+                    </code>
                
+                </td>
             </tr>
 
             <!-- Additional row template, replace # with an appropriate ID name
@@ -283,7 +307,7 @@
                 <td class="code">
                
                 </td>
-            </tr>
+                </tr>
               -->
             
         </tbody>
