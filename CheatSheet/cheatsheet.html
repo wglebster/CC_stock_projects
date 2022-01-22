@@ -23,7 +23,7 @@
                     that location. <br>This rule also allows locally hosted fonts to be added using a relative file path instead of a web URL.
                     <br>
                     <strong>To add multiple fonts use @font-face block for each font face</strong>
-                    <br><a href="#to-top">Back to the Top</a>
+                    <br><a href="#to-top">To Top</a>
                 </td>
                 <td class="code">
                     <code>@font-face { <br>font-family: 'Glegoo';<br> src: url( '../fonts/Glegoo-Regular.ttf') format( 'truetype');<br> 
@@ -36,7 +36,7 @@
                 <td class="description">
                     <h3>CSS Linking fonts</h3> Linking fonts allow user to use web fonts in the document. <br>They can be imported in an HTML document by using the <code>
                     <link> </code>tag.<br> Once the web font URL is placed within the href attribute, the imported font can then be used in CSS declaration.
-                    <br><a href="#to-top">Back to the Top</a>
+                    <br><a href="#to-top">To Top</a>
                 </td>
                 <td class="code">
                     <code> head <br> link href="https://fonts.googleapis.com/css?family=Droid%20Serif"<br> rel="stylesheet"<br> /head
@@ -54,7 +54,7 @@
                         <li>right - moves the element away from the right side (to the left)</li>
                     </ul>
                     You can specify values in pixels, ems, or percentages, among others, to dial in exactly how far you need the element to move. It’s also important to note that offset properties will not work if the element’s position property is the default static.
-                    <br><a href="#to-top">Back to the Top</a>
+                    <br><a href="#to-top">To Top</a>
                 </td>
                 <td class="code"><code>
                     .green-box {<br>
@@ -71,7 +71,7 @@
                     <h3>Position: Absolute</h3>
                     Another way of modifying the position of an element is by setting its position to absolute. When an element's position is set to absolute, all other elements on the page will ignore the element and act like it is not present on the page. The element <em>will
                     be positioned relative to its closest positioned parent element</em>, while offset properties can be used to determine the final position from there.
-                    <br><a href="#to-top">Back to the Top</a>
+                    <br><a href="#to-top">To Top</a>
                 </td>
                 <td class="code">
                     <code> 
@@ -87,7 +87,7 @@
                 <td class="description">
                     <h3>Position: Fixed</h3> When an element's position is set to absolute, the element will scroll with the rest of the document when a user scrolls. We can fix an element to a specific position on the page (regardless of user scrolling)
                     by setting its position to fixed, and accompanying it with the offset properties top, bottom, left, and right.
-                    <br><a href="#to-top">Back to the Top</a>
+                    <br><a href="#to-top">To Top</a>
                 </td>
                 <td class="code">
                     <code>
@@ -105,7 +105,7 @@
                     The sticky value is another position value that keeps an element in the document flow as the user scrolls, but sticks to a specified position as the page is scrolled further. This is done by using the sticky value along with the offset properties. In
                     the example on the left, the .box-bottom <em>div</em> will remain in its relative position, and scroll as usual. When it reaches 240 pixels from the top, it will stick to that position until it reaches the bottom
                     of its parent container where it will “unstick” and rejoin the flow of the document.
-                    <br><a href="#to-top">Back to the Top</a>
+                    <br><a href="#to-top">To Top</a>
                 </td>
                 <td class="code">
                     <code>
@@ -132,7 +132,7 @@
                     <p>The third value for the display property is inline-block. Inline-block display combines features of both inline and block elements. Inline-block elements can appear next to each other and we can specify their dimensions using the width
                         and height properties. Images are the best example of default inline-block elements.</p>
                     
-                    <br><a href="#to-top">Back to the Top</a>
+                    <br><a href="#to-top">To Top</a>
                 </td>
             </tr>
             <tr id="media-queries">
@@ -169,7 +169,7 @@
                         </li>
                     </ol>
 
-                    <br><a href="#to-top">Back to the Top</a>
+                    <br><a href="#to-top">To Top</a>
                 </td>
                 <td class="code">
                     <code>
@@ -216,7 +216,41 @@
                     </p>
                     <p>Possible breakpoints: <img class="breakpoints" src="./img/screen-sizes.webp"></p>
 
-                    <br><a href="#to-top">Back to the Top</a>
+                    <br><a href="#to-top">To Top</a>
+                </td>
+            </tr>
+            <tr id="flexbox">
+                <td class="description" colspan="2">
+                    <h3>Flexbox</h3>
+                    <p>There are two important components to a flexbox layout:</p> 
+                    <ul>
+                        <li><strong>Flex container:</strong> is an element on a page that <em>contains</em> flex items.<br>
+                        To designate an element as a flex container, set the element’s <code>display</code> property to </code>flex</code> or <code>inline-flex</code>.                    
+                        </li>
+                        <li><strong>Flex items:</strong> all direct child elements of a flex container <em>are</em> flex items.
+                        <p>Once an item is a flex container, there are several properties we can use to specify how its children behave</p>
+                        <ul>
+                            <li>justify-content</li>
+                            <li>align-items</li>
+                            <li>flex-grow</li>
+                            <li>flex-shrink</li>
+                            <li>flex-basis</li>
+                            <li>flex</li>
+                            <li>flex-wrap</li>
+                            <li>align-content</li>
+                            <li>flex-direction</li>
+                            <li>flex-flow</li>
+                        </ul>
+                        </li>
+                    </ul>
+                    <p>The distinction between flex container and flex item is important because some of the properties apply to flex containers while others apply to flex items.
+                    </p>
+                    
+                    <br><a href="#to-top">To Top</a>
+                </td>
+                <td class="code">
+                    
+                    </code>
                 </td>
             </tr>
         </tbody>

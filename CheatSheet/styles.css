@@ -1,10 +1,13 @@
+html{
+    font-size: 10px;
+}
 @font-face {
     /*Merriweather Sans font & Cutive Mono*/
     @import url("https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Merriweather+Sans:wght@300&display=swap");
 }
 
 caption {
-    font-size: 2rem;
+    font-size: 3.5rem;
     font-weight: bold;
     padding-bottom: 2%;
 }
@@ -13,12 +16,14 @@ th {
     border: #9ea3a0 0.5px solid;
     background-color: #33661e;
     color: beige;
+    font-size: 2.5rem;
 }
 
 td {
     border: #9ea3a0 0.5px solid;
     background-color: #ebe8c7;
     padding: 0.5%;
+    font-size: 2rem;
 }
 img {
     width: 800px;
