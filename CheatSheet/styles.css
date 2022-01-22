@@ -1,33 +1,49 @@
-        @font-face {
-            /*Merriweather Sans font & Cutive Mono*/
-            @import url("https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Merriweather+Sans:wght@300&display=swap");
-        }
-        
-        caption {
-            font-size: 2rem;
-            font-weight: bold;
-            padding-bottom: 2%;
-        }
-        
-        th {
-            border: #9ea3a0 0.5px solid;
-            background-color: #33661e;
-            color: beige;
-        }
-        
-        td {
-            border: #9ea3a0 0.5px solid;
-            background-color: #ebe8c7;
-        }
-        
-        .description {
-            font-family: 'Merriweather Sans', 'Arial', sans-serif;
-        }
-        
-        .code {
-            font-family: "Cutive Mono", Courier, monospace;
-        }
-        img {
-            width: 800px;
-            display: block;
-        }
+@font-face {
+    /*Merriweather Sans font & Cutive Mono*/
+    @import url("https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Merriweather+Sans:wght@300&display=swap");
+}
+
+caption {
+    font-size: 2rem;
+    font-weight: bold;
+    padding-bottom: 2%;
+}
+
+th {
+    border: #9ea3a0 0.5px solid;
+    background-color: #33661e;
+    color: beige;
+}
+
+td {
+    border: #9ea3a0 0.5px solid;
+    background-color: #ebe8c7;
+    padding: 0.5%;
+}
+img {
+    width: 800px;
+    display: block;
+}
+
+.description {
+    font-family: 'Merriweather Sans', 'Arial', sans-serif;
+}
+
+.code {
+    font-family: "Cutive Mono", Courier, monospace;
+}
+
+a[href="#to-top"] {
+   display: block;
+   float: right;
+   background-color: #33661e;
+   padding: 0.5%;
+   text-decoration: none;
+   color: white;
+}
+a[href="#to-top"]:hover{
+    background-color: #1d4e09;
+}
+a[href="#to-top"]:active{
+    background-color: black;
+}
