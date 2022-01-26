@@ -61,15 +61,32 @@ html{
     background-color: black;
     padding: 0.5% 0.5%;
 }
-.mission h2{
+h2{
     font-size: 3.2rem;
 }
-.mission h4{
+h4{
     font-size: 2.5rem;
 }
 .tea-of-the-month{
+    /*position: inherit;*/
+    width: 1000px;
+    margin: 0 auto;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     text-align: center;
-    justify-content: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.tea-of-the-month-desc{
+    width: 100%;
+    margin: 5% 0 1%;
+}
+.tea-of-the-month img{
+    width: 300px;
+    height: 200px;
+    padding: 10px;
+}
+.tea-of-the-month figcaption{
+    font-size: 2.5rem;
+    font-weight: bold;
 }
