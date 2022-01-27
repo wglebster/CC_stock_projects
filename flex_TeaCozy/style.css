@@ -10,7 +10,12 @@ html{
     color: seashell;
     font-family: Helvetica, Arial, sans-serif;
 }
-
+a{
+    color: seashell;
+}
+a:hover{
+    text-decoration: none;
+}
 .header-container{
     height: 69px;
     /*position: fixed;*/
@@ -70,6 +75,10 @@ h3{
 h4{
     font-size: 2.2rem;
 }
+h5{
+    font-size: 1.9rem;
+
+}
 .tea-of-the-month{
     /*position: inherit;*/
     width: 1000px;
@@ -102,7 +111,7 @@ h4{
     width: 1200px;
     background: url(./img/img-locations-background.webp) no-repeat;
     background-size: cover;
-    margin: 5% auto;
+    margin: 5% auto 0;
 }
 .locations h2{
     display: block;
@@ -123,4 +132,19 @@ h4{
     justify-content: center;
     align-items: center;
     row-gap: 10%;
+}
+footer{
+    height: 200px;
+    background-color: black;
+    text-align: center;
+    margin-top: 2%;
+}
+footer h2, h5{
+    padding: 0.5% 0;
+}
+
+.copyright{
+    height: 50px;
+    background-color: black;
+    padding-left: 20px;
 }
