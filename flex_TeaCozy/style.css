@@ -45,13 +45,16 @@ a:hover{
 }
  
 .container-main{
+    width: 1200px;
     display: flex;
     flex-direction: column;
+    align-items: center;
     position: relative;
     top: 70px;
 }
 .mission{
     height: 700px;
+    width: 1200px;
     background: url(./img/img-mission-background.webp) no-repeat;
     background-size: cover;
     margin: 0 auto;
@@ -59,7 +62,7 @@ a:hover{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 1200px;
+    
 }
 .mission h2,h4{
     display: block;
@@ -80,9 +83,7 @@ h5{
 
 }
 .tea-of-the-month{
-    /*position: inherit;*/
     width: 1000px;
-    margin: 0 auto;
     display: flex;
     flex-direction: row;
     text-align: center;
@@ -149,3 +150,36 @@ footer h2, h5{
     background-color: black;
     padding-left: 20px;
 }
+/*@media only screen and (max-width: 600px){
+    .navigation li{
+        font-size: 4.2rem;
+    }
+    h2{
+        font-size: ;
+    }
+    h3{
+        font-size: ;
+    }
+    h4{
+        font-size: ;
+    }
+    h5{
+        font-size: ;
+    }
+    .tea-of-the-month figcaption{
+        font-size: 5rem;
+    }
+    .tea-of-the-month{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+    .tea-of-the-month img{
+        width: 450px;
+        height: 300px;
+        padding: 20px;
+    }
+
+}*/
