@@ -6,12 +6,17 @@ html {
 }
 
 .main-content {
+  width: 1440px;
+  display: flex;
+  flex-flow: column;
   position: relative;
   top: 5.3125rem; /* To offset for fixed header. */
+  margin: 0 auto;
 }
 
 .center {
   text-align: center;
+  height: 635px;
 }
 
 .button {
@@ -21,11 +26,11 @@ html {
 }
 
 .image-container {
-  overflow: hidden;
+    overflow: hidden;
 }
 
 .image-container img {
-  display: block;
+   display: block;
 }
 
 @media only screen and (max-width: 760px) {
@@ -41,6 +46,7 @@ header {
   width: 100%;
   border-bottom: solid 1px #c6c1c1;
   background-color: white;
+  z-index: 2;
 }
 
 header .content {
@@ -115,8 +121,9 @@ header .mobile {
 #sign-up-section {
   display: flex;
   justify-content: flex-start;
-  align-items: flex-start;
+  align-items: center;
   height: 43.5rem;
+  background: url("../images/banner-landingpage.jpg") no-repeat;
 }
 
 #sign-up-cta {
@@ -211,13 +218,15 @@ header .mobile {
 
 #features-section {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   padding: 4rem 5%;
   background-color: #f3f3f3;
 }
-
+#features-section .center .image-container img{
+  width: 90%;
+  object-fit: scale-down;
+}
 .feature {
-  flex: 1;
   padding: 2rem;
   margin: 0px 1.25rem;
   background-color: white;
@@ -271,6 +280,7 @@ header .mobile {
 /* Filters Section */
 
 #filters-section {
+  display: flex;
   padding: 4rem 0;
   background-color: #4a4a4a;
 }
@@ -294,6 +304,8 @@ header .mobile {
 }
 
 #filters-section .images-container {
+  display: flex;
+  justify-content: center;
   max-width: 100%;
   padding: 0 1%;
 }
@@ -320,6 +332,8 @@ header .mobile {
   }
 
   #filters-section .images-container {
+    width: 90%;
+    object-fit: scale-down;
     padding: 0;
   }
 
