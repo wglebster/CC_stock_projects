@@ -671,6 +671,9 @@ Then, you can assign other properties to lay out the grid to suit your needs.
                     grid-template-columns: 20% 50%; <br>
                   }<br><br>
                </code>
+            </td>
+            </tr>
+
 
         <tr id="grid-rows">
             <td class="description">
@@ -678,7 +681,9 @@ Then, you can assign other properties to lay out the grid to suit your needs.
             <p>
                 To specify the number and size of the rows, we are going to use the property <code>grid-template-rows</code>.
 
-                This property is almost identical to <code>grid-template-columns</code>.
+                This property is almost identical to <code>grid-template-columns</code>. <br><br>
+
+                When using percentages in these two properties, remember that rows are defined as a percentage of the grid’s height, and columns are defined as a percentage of its width.
             </p>
             
             <br><a href="#to-top">To Top</a>
@@ -695,11 +700,80 @@ Then, you can assign other properties to lay out the grid to suit your needs.
                 </code>
             
             </td>
-            </tr>
-    
-    </td>
-</tr>
+        </tr>
 
+        <tr id="grid-template-shorthand">
+            <td class="description">
+            <h3>Grid Template (shorthand)</h3>
+
+            <p>
+                The shorthand property, <code>grid-template</code>, can replace the previous two CSS properties.
+            </p>
+            <p>
+                When using <code>grid-template</code>, the values before the slash will determine the size of each row. The values after the slash determine the size of each column. In this example, we’ve made two rows and three columns of varying sizes.
+
+                The same rules from before apply; when using percentages to set rows, each row will be a percentage of the grid’s total height. Columns are still a percentage of the total width.
+            </p>
+            
+            <br><a href="#to-top">To Top</a>
+            </td>
+            <td class="code">
+                <code>
+                    .grid { <br>
+                        display: grid; <br>
+                        width: 1000px; <br>
+                        height: 500px; <br>
+                        grid-template: 200px 300px / 20% 10% 70%; <br>
+                        } <br><br>
+                </code>
+                </td>
+            </tr>
+
+            <tr id="fraction">
+                <td class="description">
+                <h3>Fraction</h3>
+                <p>
+                    By using the <code>fr</code> unit, we can define the size of columns and rows as a fraction of the grid’s length and width. This unit was specifically created for use in CSS Grid. Using fr makes it easier to prevent grid items from overflowing the boundaries of the grid.<br><br>
+                    It is possible to combine <code>fr</code> with other units e.g. <code>px</code> or <code>%</code>.
+                </p>
+                <br><a href="#to-top">To Top</a>
+                </td>
+                <td class="code">
+                    <code>
+                        .grid { <br>
+                            display: grid; <br>
+                            width: 1000px; <br>
+                            height: 400px; <br>
+                            grid-template: 2fr 1fr 1fr / 1fr 3fr 1fr; <br>
+                          } <br><br>
+                    </code>
+                
+                </td>
+                </tr>
+
+                <tr id="repeat">
+                    <td class="description">
+                    <h3>Repeat</h3>
+                    <p>
+                        The properties that define the number of rows and columns in a grid can take a function as a value. <code>repeat()</code> is one of these functions. The <code>repeat()</code> function was created specifically for CSS Grid.
+                    </p>
+                    
+                    <br><a href="#to-top">To Top</a>
+                    </td>
+                    <td class="code">
+                        <code>
+                            .grid { <br>
+                                display: grid; <br>
+                                width: 300px; <br>
+                                grid-template-columns: repeat(3, 100px); <br>
+                              }<br><br>
+                        </code>
+                    
+                    </td>
+                    </tr>
+
+
+    
 <!-- Additional row template, replace # with an appropriate ID name
 <tr id="#">
 <td class="description">
