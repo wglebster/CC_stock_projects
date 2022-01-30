@@ -621,7 +621,7 @@ To turn an HTML element into a grid container, you must set the element’s disp
 Then, you can assign other properties to lay out the grid to suit your needs.
 </p>
 
-<br><a href="#to-top">To Top</a>
+<!-- <br><a href="#to-top">To Top</a>
 </td>
 <td class="code">
 
@@ -636,10 +636,68 @@ Then, you can assign other properties to lay out the grid to suit your needs.
 </td>
 <td class="code">
 
-</td>
+<!-- </td>
 </tr>
 
 </td>
+</tr> -->
+
+<tr id="grid-columns">
+    <td class="description">
+    <h3>Grid Columns</h3>
+    <p>
+        By default, grids contain only one column. If you were to start adding items, each item would be put on a new row; that’s not much of a grid! To change this, we need to explicitly define the number of rows and columns in our grid.
+
+        We can define the columns of our grid by using the CSS property <code>grid-template-columns.</code> <br><br>
+
+        It is possible to use either px or % for <code>grid-template-columns</code>
+    </p>
+    
+    <br><a href="#to-top">To Top</a>
+    </td>
+    <td class="code">
+        <code>
+            .grid { <br>
+                display: grid; <br>
+                width: 500px; <br>
+                grid-template-columns: 100px 200px; <br>
+              } <br><br>
+              </code>
+              OR <br><br>
+              <code>
+                .grid { <br>
+                    display: grid; <br>
+                    width: 1000px; <br>
+                    grid-template-columns: 20% 50%; <br>
+                  }<br><br>
+               </code>
+
+        <tr id="grid-rows">
+            <td class="description">
+            <h3>Grid Rows</h3>
+            <p>
+                To specify the number and size of the rows, we are going to use the property <code>grid-template-rows</code>.
+
+                This property is almost identical to <code>grid-template-columns</code>.
+            </p>
+            
+            <br><a href="#to-top">To Top</a>
+            </td>
+            <td class="code">
+                <code>
+                    .grid { <br>
+                        display: grid; <br>
+                        width: 1000px; <br>
+                        height: 500px; <br>
+                        grid-template-columns: 100px 200px; <br>
+                        grid-template-rows: 10% 20% 600px; <br>
+                      } <br><br>
+                </code>
+            
+            </td>
+            </tr>
+    
+    </td>
 </tr>
 
 <!-- Additional row template, replace # with an appropriate ID name
