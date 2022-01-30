@@ -9,624 +9,653 @@
 
 <body>
 <table>
-    <caption id="to-top">Cheatsheet to make notes of hard to remember topics</caption>
-    <thead>
-        <tr>
-            <th scope="col">Description</th>
-            <th scope="col">Code</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr id = "font-face">
-            <td class="description">
-                <h3>CSS @font-face rule</h3> The CSS @font-face rule allows external fonts or font files to be imported directly into stylesheets.<br> The location of the font file must be specified in the CSS rule so that the files can be loaded from
-                that location. <br>This rule also allows locally hosted fonts to be added using a relative file path instead of a web URL.
-                <br>
-                <strong>To add multiple fonts use @font-face block for each font face</strong>
-                <br><a href="#to-top">To Top</a>
-            </td>
-            <td class="code">
-                <code>@font-face { <br>font-family: 'Glegoo';<br> src: url( '../fonts/Glegoo-Regular.ttf') format( 'truetype');<br> 
-                }</code><br>
-                <code>@font-face { <br>font-family: 'font2';<br> src: url( '../fonts/font2.woff') format( 'woff');<br> 
-                }</code>
-            </td>
-        </tr>
-        <tr id ="external-fonts">
-            <td class="description">
-                <h3>CSS Linking fonts</h3> Linking fonts allow user to use web fonts in the document. <br>They can be imported in an HTML document by using the <code>
-                <link> </code>tag.<br> Once the web font URL is placed within the href attribute, the imported font can then be used in CSS declaration.
-                <br><a href="#to-top">To Top</a>
-            </td>
-            <td class="code">
-                <code> head <br> link href="https://fonts.googleapis.com/css?family=Droid%20Serif"<br> rel="stylesheet"<br> /head
-                </code>
-            </td>
-        </tr>
-        <tr id="position-relative">
-            <td class="description">
-                <h3>Position: Relative</h3>This value allows you to position an element <em>relative to its default <strong>position</strong> </em> on the web page. Relative offset needs to be specified by accompanying the position declaration with one
-                or more of the following offset properties that will move the element away from its default static position:
-                <ul>
-                    <li>top - moves the element down from the top</li>
-                    <li>bottom - moves the element up from the bottom</li>
-                    <li>left - moves the element away from the left side (to the right)</li>
-                    <li>right - moves the element away from the right side (to the left)</li>
-                </ul>
-                You can specify values in pixels, ems, or percentages, among others, to dial in exactly how far you need the element to move. It’s also important to note that offset properties will not work if the element’s position property is the default static.
-                <br><a href="#to-top">To Top</a>
-            </td>
-            <td class="code"><code>
-                .green-box {<br>
-                background-color: green;<br>
-                position: relative;<br>
-                top: 50px;<br>
-                left: 120px;<br>
-                    }
-            </code>
-            </td>
-        </tr>
-        <tr id ="position-absolute">
-            <td class="description">
-                <h3>Position: Absolute</h3>
-                Another way of modifying the position of an element is by setting its position to absolute. When an element's position is set to absolute, all other elements on the page will ignore the element and act like it is not present on the page. The element <em>will
-                be positioned relative to its closest positioned parent element</em>, while offset properties can be used to determine the final position from there.
-                <br><a href="#to-top">To Top</a>
-            </td>
-            <td class="code">
-                <code> 
-                    .green-box {<br> 
-                        background-color: green;<br> 
-                        position: absolute;<br> 
-                        top: 50px;<br> 
-                        left: 120px;<br> }
-                </code>
-            </td>
-        </tr>
-        <tr id ="postion-fixed">
-            <td class="description">
-                <h3>Position: Fixed</h3> When an element's position is set to absolute, the element will scroll with the rest of the document when a user scrolls. We can fix an element to a specific position on the page (regardless of user scrolling)
-                by setting its position to fixed, and accompanying it with the offset properties top, bottom, left, and right.
-                <br><a href="#to-top">To Top</a>
-            </td>
-            <td class="code">
-                <code>
-                    .title { <br>
-                        position: fixed;<br>
-                        top: 0px; <br>
-                        left: 0px; <br>
-                        }
-                </code>
-            </td>
-        </tr>
-        <tr id="position-sticky">
-            <td class="description">
-                <h3>Position: Sticky</h3>
-                The sticky value is another position value that keeps an element in the document flow as the user scrolls, but sticks to a specified position as the page is scrolled further. This is done by using the sticky value along with the offset properties. In
-                the example on the left, the .box-bottom <em>div</em> will remain in its relative position, and scroll as usual. When it reaches 240 pixels from the top, it will stick to that position until it reaches the bottom
-                of its parent container where it will “unstick” and rejoin the flow of the document.
-                <br><a href="#to-top">To Top</a>
-            </td>
-            <td class="code">
-                <code>
-                    .box-bottom { <br>
-                        background-color: darkgreen; <br>
-                        position: sticky; <br>
-                        top: 240px; <br>
-                        }
-                </code>
-            </td>
-        </tr>
-        <tr id="display-inline">
-            <td class="description" colspan="2">
-                <h3>Display: inline</h3>
-                <p>The default display for some elements, such as <em>em/strong</em> and <em>a</em>, is called inline. Inline elements have a box that wraps tightly around their content, only taking up the amount of space necessary to display their content
-                    and not requiring a new line after each element. The height and width of these elements cannot be specified in the CSS document.</p>
-                <p>The CSS <em>display</em> property provides the ability to make any element an inline element. This includes elements that are not inline by default such as paragraphs, divs, and headings.</p>
+<caption id="to-top">Cheatsheet to make notes of hard to remember topics</caption>
+<thead>
+<tr>
+<th scope="col">Description</th>
+<th scope="col">Code</th>
+</tr>
+</thead>
+<tbody>
+<tr id = "font-face">
+<td class="description">
+<h3>CSS @font-face rule</h3> The CSS @font-face rule allows external fonts or font files to be imported directly into stylesheets.<br> The location of the font file must be specified in the CSS rule so that the files can be loaded from
+that location. <br>This rule also allows locally hosted fonts to be added using a relative file path instead of a web URL.
+<br>
+<strong>To add multiple fonts use @font-face block for each font face</strong>
+<br><a href="#to-top">To Top</a>
+</td>
+<td class="code">
+<code>@font-face { <br>font-family: 'Glegoo';<br> src: url( '../fonts/Glegoo-Regular.ttf') format( 'truetype');<br> 
+}</code><br>
+<code>@font-face { <br>font-family: 'font2';<br> src: url( '../fonts/font2.woff') format( 'woff');<br> 
+}</code>
+</td>
+</tr>
+<tr id ="external-fonts">
+<td class="description">
+<h3>CSS Linking fonts</h3> Linking fonts allow user to use web fonts in the document. <br>They can be imported in an HTML document by using the <code>
+<link> </code>tag.<br> Once the web font URL is placed within the href attribute, the imported font can then be used in CSS declaration.
+<br><a href="#to-top">To Top</a>
+</td>
+<td class="code">
+<code> head <br> link href="https://fonts.googleapis.com/css?family=Droid%20Serif"<br> rel="stylesheet"<br> /head
+</code>
+</td>
+</tr>
+<tr id="position-relative">
+<td class="description">
+<h3>Position: Relative</h3>This value allows you to position an element <em>relative to its default <strong>position</strong> </em> on the web page. Relative offset needs to be specified by accompanying the position declaration with one
+or more of the following offset properties that will move the element away from its default static position:
+<ul>
+<li>top - moves the element down from the top</li>
+<li>bottom - moves the element up from the bottom</li>
+<li>left - moves the element away from the left side (to the right)</li>
+<li>right - moves the element away from the right side (to the left)</li>
+</ul>
+You can specify values in pixels, ems, or percentages, among others, to dial in exactly how far you need the element to move. It’s also important to note that offset properties will not work if the element’s position property is the default static.
+<br><a href="#to-top">To Top</a>
+</td>
+<td class="code"><code>
+.green-box {<br>
+background-color: green;<br>
+position: relative;<br>
+top: 50px;<br>
+left: 120px;<br>
+}
+</code>
+</td>
+</tr>
+<tr id ="position-absolute">
+<td class="description">
+<h3>Position: Absolute</h3>
+Another way of modifying the position of an element is by setting its position to absolute. When an element's position is set to absolute, all other elements on the page will ignore the element and act like it is not present on the page. The element <em>will
+be positioned relative to its closest positioned parent element</em>, while offset properties can be used to determine the final position from there.
+<br><a href="#to-top">To Top</a>
+</td>
+<td class="code">
+<code> 
+.green-box {<br> 
+background-color: green;<br> 
+position: absolute;<br> 
+top: 50px;<br> 
+left: 120px;<br> }
+</code>
+</td>
+</tr>
+<tr id ="postion-fixed">
+<td class="description">
+<h3>Position: Fixed</h3> When an element's position is set to absolute, the element will scroll with the rest of the document when a user scrolls. We can fix an element to a specific position on the page (regardless of user scrolling)
+by setting its position to fixed, and accompanying it with the offset properties top, bottom, left, and right.
+<br><a href="#to-top">To Top</a>
+</td>
+<td class="code">
+<code>
+.title { <br>
+position: fixed;<br>
+top: 0px; <br>
+left: 0px; <br>
+}
+</code>
+</td>
+</tr>
+<tr id="position-sticky">
+<td class="description">
+<h3>Position: Sticky</h3>
+The sticky value is another position value that keeps an element in the document flow as the user scrolls, but sticks to a specified position as the page is scrolled further. This is done by using the sticky value along with the offset properties. In
+the example on the left, the .box-bottom <em>div</em> will remain in its relative position, and scroll as usual. When it reaches 240 pixels from the top, it will stick to that position until it reaches the bottom
+of its parent container where it will “unstick” and rejoin the flow of the document.
+<br><a href="#to-top">To Top</a>
+</td>
+<td class="code">
+<code>
+.box-bottom { <br>
+background-color: darkgreen; <br>
+position: sticky; <br>
+top: 240px; <br>
+}
+</code>
+</td>
+</tr>
+<tr id="display-inline">
+<td class="description" colspan="2">
+<h3>Display: inline</h3>
+<p>The default display for some elements, such as <em>em/strong</em> and <em>a</em>, is called inline. Inline elements have a box that wraps tightly around their content, only taking up the amount of space necessary to display their content
+and not requiring a new line after each element. The height and width of these elements cannot be specified in the CSS document.</p>
+<p>The CSS <em>display</em> property provides the ability to make any element an inline element. This includes elements that are not inline by default such as paragraphs, divs, and headings.</p>
 
-                <h3>Display: Block</h3>
-                <p>Some elements are not displayed in the same line as the content around them. These are called block-level elements. These elements fill the entire width of the page by default, but their width property can also be set. Unless otherwise
-                    specified, they are the height necessary to accommodate their content.</p>
+<h3>Display: Block</h3>
+<p>Some elements are not displayed in the same line as the content around them. These are called block-level elements. These elements fill the entire width of the page by default, but their width property can also be set. Unless otherwise
+specified, they are the height necessary to accommodate their content.</p>
 
-                <h3>Display: Inline-Block</h3>
-                <p>The third value for the display property is inline-block. Inline-block display combines features of both inline and block elements. Inline-block elements can appear next to each other and we can specify their dimensions using the width
-                    and height properties. Images are the best example of default inline-block elements.</p>
-                
-                <br><a href="#to-top">To Top</a>
-            </td>
-        </tr>
-        <tr id="media-queries">
-            <td class="description">
-                <h3>Media Queries</h3>
-                <p>CSS uses media queries to adapt a website’s content to different screen sizes. With media queries, CSS can detect the size of the current screen and apply different CSS styles depending on the width of the screen.</p>
-                <ol>
-                    <li>
-                        <code>@media</code> — This keyword begins a media query rule and instructs the CSS compiler on how to parse the rest of the rule.
-                    </li>
-                    <li>
-                        <code>only screen</code> — Indicates what types of devices should use this rule. In early attempts to target different devices, CSS incorporated different media types (screen, print, handheld). The rationale was that by knowing the media type, the proper CSS rules could be applied. However, “handheld” and “screen” devices began to occupy a much wider range of sizes and having only one CSS rule per media device was not sufficient. screen is the media type always used for displaying content, no matter the type of device. The only keyword is added to indicate that this rule only applies to one media type (screen).
-                    </li>
-                    <li>
-                        <code>and (max-width : 480px)</code> — This part of the rule is called a media feature, and instructs the CSS compiler to apply the CSS styles to devices with a width of 480 pixels or smaller. Media features are the conditions that must be met in order to render the CSS within a media query.
-                    </li>
-                    <li>
-                        CSS rules are nested inside of the media query’s curly braces. The rules will be applied when the media query is met. In the example above, the text in the body element is set to a font-size of 12px when the user’s screen is less than 480px.
-                    </li>
-                    <li>
-                        <h3>And Operator</h3>
-                        <p>The and operator can be used to require multiple media features. Therefore, we can use the and operator to require both a max-width of 480px and to have a min-resolution of 300dpi.</p>
-                    </li>
-                    <li>
-                        <h3>Comma Separated List</h3>
-                        <p>If only one of multiple media features in a media query must be met, media features can be separated in a comma separated list.
+<h3>Display: Inline-Block</h3>
+<p>The third value for the display property is inline-block. Inline-block display combines features of both inline and block elements. Inline-block elements can appear next to each other and we can specify their dimensions using the width
+and height properties. Images are the best example of default inline-block elements.</p>
 
-                        For example, if we needed to apply a style when only one of the below is true:
-                        </p>
-                        <ul>
-                            <li>The screen is more than 480 pixels wide</li>
-                            <li>The screen is in landscape mode</li>
-                        </ul>
-                    </li>
-                </ol>
+<br><a href="#to-top">To Top</a>
+</td>
+</tr>
+<tr id="media-queries">
+<td class="description">
+<h3>Media Queries</h3>
+<p>CSS uses media queries to adapt a website’s content to different screen sizes. With media queries, CSS can detect the size of the current screen and apply different CSS styles depending on the width of the screen.</p>
+<ol>
+<li>
+<code>@media</code> — This keyword begins a media query rule and instructs the CSS compiler on how to parse the rest of the rule.
+</li>
+<li>
+<code>only screen</code> — Indicates what types of devices should use this rule. In early attempts to target different devices, CSS incorporated different media types (screen, print, handheld). The rationale was that by knowing the media type, the proper CSS rules could be applied. However, “handheld” and “screen” devices began to occupy a much wider range of sizes and having only one CSS rule per media device was not sufficient. screen is the media type always used for displaying content, no matter the type of device. The only keyword is added to indicate that this rule only applies to one media type (screen).
+</li>
+<li>
+<code>and (max-width : 480px)</code> — This part of the rule is called a media feature, and instructs the CSS compiler to apply the CSS styles to devices with a width of 480 pixels or smaller. Media features are the conditions that must be met in order to render the CSS within a media query.
+</li>
+<li>
+CSS rules are nested inside of the media query’s curly braces. The rules will be applied when the media query is met. In the example above, the text in the body element is set to a font-size of 12px when the user’s screen is less than 480px.
+</li>
+<li>
+<h3>And Operator</h3>
+<p>The and operator can be used to require multiple media features. Therefore, we can use the and operator to require both a max-width of 480px and to have a min-resolution of 300dpi.</p>
+</li>
+<li>
+<h3>Comma Separated List</h3>
+<p>If only one of multiple media features in a media query must be met, media features can be separated in a comma separated list.
 
-                <br><a href="#to-top">To Top</a>
-            </td>
-            <td class="code">
-                <code>
-                    @media only screen and (max-width: 480px) {<br>
-                        body {<br>
-                            font-size: 12px;<br>
-                        }<br>
-                        }<br><br><br>
-                </code>
-                <p>A rule for a range of screen sizes</p>
-                <code>
-                    @media only screen and (min-width: 320px) and (max-width: 480px) {<br>
-                        /* ruleset for 320px - 480px */<br>
-                    }<br><br>
-                </code>
-                <p>Same can be written as two separate rules</p>
-                <code>
-                    @media only screen and (min-width: 320px) { <br>
-                        /* ruleset for >= 320px */<br>
-                    }<br><br>
-                        
-                        
-                    @media only screen and (min-width: 480px) { <br>
-                        /* ruleset for >= 480px */<br>
-                    }<br><br>
-                </code>
-                <code>
-                    @media only screen and (max-width: 480px) and <br>(min-resolution: 300dpi) { <br>
-                        /* CSS ruleset */ <br>
-                    } <br><br>
-                </code>
-                <code>
-                    @media only screen and (min-width: 480px), (orientation: <br> landscape) { <br>
-                        /* CSS ruleset */<br>
-                    }<br><br>
-                </code>
-            </td>
-        </tr>
-        <tr id="breakpoints">
-            <td colspan="2" class="description">
-                <h3>Breakpoints</h3>
-                <p>The points at which media queries are set are called breakpoints. Breakpoints are the screen sizes at which your web page does not appear properly. 
-                Rather than set breakpoints based on specific devices, the best practice is to resize your browser to view where the website naturally breaks based on its content. The dimensions at which the layout breaks or looks odd become your media query breakpoints. Within those breakpoints, we can adjust the CSS to make the page resize and reorganize.
-                </p>
-                <p>Possible breakpoints: <img class="breakpoints" src="./img/screen-sizes.webp"></p>
+For example, if we needed to apply a style when only one of the below is true:
+</p>
+<ul>
+<li>The screen is more than 480 pixels wide</li>
+<li>The screen is in landscape mode</li>
+</ul>
+</li>
+</ol>
 
-                <br><a href="#to-top">To Top</a>
-            </td>
-        </tr>
-        <tr id="flexbox">
-            <td class="description" colspan="2">
-                <h3>Flexbox</h3>
-                <p>There are two important components to a flexbox layout:</p> 
-                <ul>
-                    <li><strong>Flex container:</strong> is an element on a page that <em>contains</em> flex items.<br>
-                    To designate an element as a flex container, set the element’s <code>display</code> property to </code>flex</code> or <code>inline-flex</code>.                    
-                    </li>
-                    <li><strong>Flex items:</strong> all direct child elements of a flex container <em>are</em> flex items.
-                    <p>Once an item is a flex container, there are several properties we can use to specify how its children behave</p>
-                    <ul>
-                        <li>justify-content</li>
-                        <li>align-items</li>
-                        <li>flex-grow</li>
-                        <li>flex-shrink</li>
-                        <li>flex-basis</li>
-                        <li>flex</li>
-                        <li>flex-wrap</li>
-                        <li>align-content</li>
-                        <li>flex-direction</li>
-                        <li>flex-flow</li>
-                    </ul>
-                    </li>
-                </ul>
-                <p>The distinction between flex container and flex item is important because some of the properties apply to flex containers while others apply to flex items.
-                </p>
-                
-                <br><a href="#to-top">To Top</a>
-            </td>
-            <td class="code">
-                
-                </code>
-            </td>
-        </tr>
-        <tr id="display-flex">
-            <td class="description">
-            <h3>display: flex</h3>
-            <p>Any element can be a flex container. Child elements of flex containers. For an element to become a flex container, its <code>display</code> property must be set to <code>flex</code>.
-            <br>
-            A div with the declaration <code>display: flex;</code> will remain block level — no other elements will appear on the same line as it.
-            However, it will change the behavior of its child elements. Child elements will not begin on new lines.
-            </p>
+<br><a href="#to-top">To Top</a>
+</td>
+<td class="code">
+<code>
+@media only screen and (max-width: 480px) {<br>
+body {<br>
+font-size: 12px;<br>
+}<br>
+}<br><br><br>
+</code>
+<p>A rule for a range of screen sizes</p>
+<code>
+@media only screen and (min-width: 320px) and (max-width: 480px) {<br>
+/* ruleset for 320px - 480px */<br>
+}<br><br>
+</code>
+<p>Same can be written as two separate rules</p>
+<code>
+@media only screen and (min-width: 320px) { <br>
+/* ruleset for >= 320px */<br>
+}<br><br>
 
-            <br><a href="#to-top">To Top</a>
-            </td>
-            <td class="code">
-                <code>div.container {<br>
-                    display: flex;<br>
-                    } <br>
-                </code>
-            </td>
-        </tr>
-        <tr id="inline-flex">
-            <td class="description">
-            <h3>inline-flex</h3>
-            <p>If we didn’t want div elements to be block-level elements, we would use <code>display: inline</code>. Flexbox, however, provides the <code>inline-flex</code> value for the display property, which allows us to create flex containers that are also inline elements. When we change the value of the display property to inline-flex, the divs will display inline with each other if the page is wide enough.
-            the size of the flex container is set. Currently, the size of the parent container will override the size of its child elements. If the parent element is too small, the flex items will shrink to accommodate the parent container’s size.
-            </p>
 
-            <br><a href="#to-top">To Top</a>
-            </td>
-            <td class="code">
-                <code>
-                    .container { <br>
-                        width: 200px; <br>
-                        } <br>
-                        <br>
-                        
-                        .child { <br>
-                        display: inline-flex; <br>
-                        width: 150px; <br>
-                        height: auto; <br>
-                        } <br><br>
-                </code>
-            
-            </td>
-        </tr>
-        <tr id="justify-content">
-            <td class="description">
-            <h3>justify-content</h3>
-            <p>We can specify how flex items spread out from left to right, along the main axis. We will learn more about axes in a later exercise.
-            To position the items from left to right, we use a property called   <code>justify-content</code>.
-            Five commonly used values for the justify-content properties:
-            <ul>
-                <li>flex-start - all items will be positioned in order, starting from the left of the parent container, with no extra space between or before them.
-                </li>
-                <li>flex-end — all items will be positioned in order, with the last item starting on the right side of the parent container, with no extra space between or after them.
-                </li>
-                <li>center — all items will be positioned in order, in the center of the parent container with no extra space before, between, or after them.
-                </li>
-                <li>space-around — items will be positioned with equal space before and after each item, resulting in double the space between elements.
-                </li>
-                <li>space-between — items will be positioned with equal space between them, but no extra space before the first or after the last elements.
-                </li>
-            </ul>
-            </p>
-            <br><a href="#to-top">To Top</a>
-            </td>
-            <td class="code">
-                <code>.container { <br>
-                    display: flex; <br>
-                    justify-content: flex-end; <br>
-                    } <br>
-                    <br>
-                </code>
-            </td>
-            </tr>
-            <tr id="align-items">
-                <td class="description">
-                <h3>align-items</h3>
-                <p>The align-items property makes it possible to space flex items vertically. <br>
-                Below are five commonly used values for the align-items property:
-                <ul>
-                    <li>flex-start — all elements will be positioned at the top of the parent container.</li>
-                    <li>flex-end — all elements will be positioned at the bottom of the parent container.</li>
-                    <li>center — the center of all elements will be positioned halfway between the top and bottom of the parent container.
-                    </li>
-                    <li>baseline — the bottom of the content of all items will be aligned with each other.</li>
-                    <li>stretch — if possible, the items will stretch from top to bottom of the container (this is the default value; elements with a specified height will not stretch; elements with a minimum height or no height specified will stretch).</li>
-                </ul>
-                These five values tell the elements how to behave along the cross axis of the parent container. 
-                </p>
+@media only screen and (min-width: 480px) { <br>
+/* ruleset for >= 480px */<br>
+}<br><br>
+</code>
+<code>
+@media only screen and (max-width: 480px) and <br>(min-resolution: 300dpi) { <br>
+/* CSS ruleset */ <br>
+} <br><br>
+</code>
+<code>
+@media only screen and (min-width: 480px), (orientation: <br> landscape) { <br>
+/* CSS ruleset */<br>
+}<br><br>
+</code>
+</td>
+</tr>
+<tr id="breakpoints">
+<td colspan="2" class="description">
+<h3>Breakpoints</h3>
+<p>The points at which media queries are set are called breakpoints. Breakpoints are the screen sizes at which your web page does not appear properly. 
+Rather than set breakpoints based on specific devices, the best practice is to resize your browser to view where the website naturally breaks based on its content. The dimensions at which the layout breaks or looks odd become your media query breakpoints. Within those breakpoints, we can adjust the CSS to make the page resize and reorganize.
+</p>
+<p>Possible breakpoints: <img class="breakpoints" src="./img/screen-sizes.webp"></p>
 
-                <br><a href="#to-top">To Top</a>
-                </td>
-                <td class="code">
-                    <code>.container { <br>
-                        align-items: baseline; <br>
-                        } <br>
-                    </code>
-                </td>
-                </tr>
-                <tr id="#">
-                    <td class="description">
-                    <h3>flex-grow</h3>
-                    <p>
-                        All flex items shrink proportionally when the flex container is too small. However, if the parent container is larger than necessary then the flex items will not stretch by default. The <code>flex-grow</code> property allows us to specify if items should grow to fill a container and also which items should grow proportionally more or less than others.<br>
+<br><a href="#to-top">To Top</a>
+</td>
+</tr>
+<tr id="flexbox">
+<td class="description" colspan="2">
+<h3>Flexbox</h3>
+<p>There are two important components to a flexbox layout:</p> 
+<ul>
+<li><strong>Flex container:</strong> is an element on a page that <em>contains</em> flex items.<br>
+To designate an element as a flex container, set the element’s <code>display</code> property to </code>flex</code> or <code>inline-flex</code>.                    
+</li>
+<li><strong>Flex items:</strong> all direct child elements of a flex container <em>are</em> flex items.
+<p>Once an item is a flex container, there are several properties we can use to specify how its children behave</p>
+<ul>
+<li>justify-content</li>
+<li>align-items</li>
+<li>flex-grow</li>
+<li>flex-shrink</li>
+<li>flex-basis</li>
+<li>flex</li>
+<li>flex-wrap</li>
+<li>align-content</li>
+<li>flex-direction</li>
+<li>flex-flow</li>
+</ul>
+</li>
+</ul>
+<p>The distinction between flex container and flex item is important because some of the properties apply to flex containers while others apply to flex items.
+</p>
 
-                        If a max-width is set for an element, it will not grow larger than that even if there is more space for it to absorb.<br>
+<br><a href="#to-top">To Top</a>
+</td>
+<td class="code">
 
-                        <code>flex-grow</code><strong> is declared on flex items.</strong> 
-                    </p>
-    
-                    <br><a href="#to-top">To Top</a>
-                    </td>
-                    <td class="code">
-                    <code>
-                    .container { <br>
-                        display: flex;<br>
-                        } <br><br>
-                        
-                        .side {<br>
-                        width: 100px;<br>
-                        flex-grow: 1;<br>
-                        }<br><br>
-                        
-                        .center {<br>
-                        width: 100px;<br>
-                        flex-grow: 2;<br>
-                        }<br><br>
-                    </code>
-                    </td>
-                    </tr>
-                    <tr id="flex-basis">
-                        <td class="description">
-                        <h3>flex-basis</h3>
-                        <p>
-                            Another way of specifying the width of a flex item is with the <code>flex-basis</code> property. <code>flex-basis</code> allows us to specify the width of an item before it stretches or shrinks. <br>
-                            If the .container div is larger, the .center div will absorb twice as much space as the .side divs.
-                            The same would hold true if we assigned flex-shrink values to the divs above as well.
-                        </p>
-        
-                        <br><a href="#to-top">To Top</a>
-                        </td>
-                        <td class="code">
-                            <code>
-                                .container { <br>
-                                    display: flex; <br>
-                                    } <br>
-                                    <br>
-                                    .side { <br>
-                                    flex-grow: 1; <br>
-                                    flex-basis: 100px; <br>
-                                    } <br>
-                                    <br>
-                                    .center { <br>
-                                    flex-grow: 2; <br>
-                                    flex-basis: 150px; <br>
-                                    } <br><br>
-                            </code>
-                        
-                        </td>
-                        </tr>
-                        <tr id="flex">
-                            <td class="description">
-                            <h3>flex</h3>
-                            <p>
-                                The shorthand <code>flex</code> property provides a convenient way for specifying how elements stretch and shrink, while simplifying the CSS required. The <code>flex</code> property allows you to declare <code>flex-grow</code>, <code>flex-shrink</code>, and <code>flex-basis</code> all in one line.
-                                <br><br>
-                                <strong>!!!The flex property is different from the flex value used for the display property.</strong>
-                                <br><br>
-                                The order is: 
-                                <ol>
-                                    <li><code>flex-grow</code></li>
-                                    <li><code>flex-shrink</code></li>
-                                    <li><code>flex-basis</code></li>
-                                </ol>
-                            </p>
-            
-                            <br><a href="#to-top">To Top</a>
-                            </td>
-                            <td class="code">
-                                <code>
-                                    .big { <br>
-                                        flex-grow: 2; <br>
-                                        flex-shrink: 1; <br>
-                                        flex-basis: 150px; <br>
-                                      } <br><br>
-                                       
-                                      .small { <br>
-                                        flex-grow: 1; <br>
-                                        flex-shrink: 2; <br>
-                                        flex-basis: 100px; <br>
-                                      } <br><br>
-                                </code>
-                                The same can be done with <code>flex</code> shorthand:<br><br>
-                                <code>
-                                    big { <br>
-                                        flex: 2 1 150px; <br>
-                                      } <br><br>
-                                       
-                                      .small { <br>
-                                        flex: 1 2 100px; <br>
-                                      } <br><br>
-                                </code>
-                            
-                            </td>
-                            </tr>
-                            <tr id="flex-wrap">
-                                <td class="description">
-                                <h3>flex-wrap</h3>
-                                <p>
-                                    Sometimes, we don’t want our content to shrink to fit its container. Instead, we might want flex items to move to the next line when necessary. This can be declared with the <code>flex-wrap</code> property. The <code>flex-wrap</code> property can accept three values:
-                                    <ol>
-                                        <li><code>wrap</code> — child elements of a flex container that don’t fit into a row will move down to the next line.
-                                        </li>
-                                        <li><code>wrap-reverse</code> — the same functionality as wrap, but the order of rows within a flex container is reversed (for example, in a 2-row flexbox, the first row from a wrap container will become the second in wrap-reverse and the second row from the wrap container will become the first in wrap-reverse).
-                                        </li>
-                                        <li><code>nowrap</code> — prevents items from wrapping; this is the default value and is only necessary to override a wrap value set by a different CSS rule.
-                                        </li>
-                                    </ol>
-                                    <strong>!!!Note:</strong> The <code>flex-wrap</code> property is declared on <em>flex containers</em>.
-                                </p>
-                    
-                                <br><a href="#to-top">To Top</a>
-                                </td>
-                                <td class="code">
-                                    <code>
-                                        .container { <br>
-                                            display: inline-flex;<br>
-                                            flex-wrap: wrap;<br>
-                                            width: 250px;<br>
-                                          } <br><br>
-                                           
-                                          .item {<br>
-                                            width: 100px;<br>
-                                            height: 100px;<br>
-                                          }<br><br>
-                                    </code>
-                                
-                                </td>
-                                </tr>
+</code>
+</td>
+</tr>
+<tr id="display-flex">
+<td class="description">
+<h3>display: flex</h3>
+<p>Any element can be a flex container. Child elements of flex containers. For an element to become a flex container, its <code>display</code> property must be set to <code>flex</code>.
+<br>
+A div with the declaration <code>display: flex;</code> will remain block level — no other elements will appear on the same line as it.
+However, it will change the behavior of its child elements. Child elements will not begin on new lines.
+</p>
 
-                                <tr id="align-content">
-                                    <td class="description">
-                                    <h3>align-content</h3>
-                                    <p>
-                                        We might have multiple rows of flex items within the same container. If a flex container has multiple rows of content, we can use <code>align-content</code> to space the rows from top to bottom. Below are some of the more commonly used align-content values:
-                                        <ol>
-                                            <li><code>flex-start</code> — all rows of elements will be positioned at the top of the parent container with no extra space between.
-                                            </li>
-                                            <li><code>flex-end</code> — all rows of elements will be positioned at the bottom of the parent container with no extra space between.
-                                            </li>
-                                            <li><code>center</code> — all rows of elements will be positioned at the center of the parent element with no extra space between.
-                                            </li>
-                                            <li><code>space-between</code> — all rows of elements will be spaced evenly from the top to the bottom of the container with no space above the first or below the last.
-                                            </li>
-                                            <li><code>space-around</code> — all rows of elements will be spaced evenly from the top to the bottom of the container with the same amount of space at the top and bottom and between each element.</li>
-                                            <li><code>stretch</code> — if a minimum height or no height is specified, the rows of elements will stretch to fill the parent container from top to bottom (default value).</li>
-                                        </ol>
-                                    </p>
-                        
-                                    <br><a href="#to-top">To Top</a>
-                                    </td>
-                                    <td class="code">
-                                        <code>
-                                            .container { <br>
-                                                display: flex; <br>
-                                                width: 400px; <br>
-                                                height: 400px; <br>
-                                                flex-wrap: wrap; <br>
-                                                align-content: space-around; <br>
-                                              } <br>
-                                              <br>
-                                               
-                                              .child { <br>
-                                                width: 150px; <br>
-                                                height: 150px; <br>
-                                              } <br><br>
-                                        </code>
-                                    </td>
-                                    </tr>
+<br><a href="#to-top">To Top</a>
+</td>
+<td class="code">
+<code>div.container {<br>
+display: flex;<br>
+} <br>
+</code>
+</td>
+</tr>
+<tr id="inline-flex">
+<td class="description">
+<h3>inline-flex</h3>
+<p>If we didn’t want div elements to be block-level elements, we would use <code>display: inline</code>. Flexbox, however, provides the <code>inline-flex</code> value for the display property, which allows us to create flex containers that are also inline elements. When we change the value of the display property to inline-flex, the divs will display inline with each other if the page is wide enough.
+the size of the flex container is set. Currently, the size of the parent container will override the size of its child elements. If the parent element is too small, the flex items will shrink to accommodate the parent container’s size.
+</p>
 
-                                    <tr id="flex-direction">
-                                        <td class="description">
-                                        <h3>flex-direction</h3>
-                                        <p>
-                                            Flex containers have two axes: a main axis and a cross axis. By default, the main axis is horizontal and the cross axis is vertical.
-                                            <br><br>
-                                            The main axis is used to position flex items with the following properties:
-                                            <ol>
-                                                <li>justify-content</li>
-                                                <li>flex-wrap</li>
-                                                <li>flex-grow</li>
-                                                <li>flex-shrink</li>
-                                            </ol>
-                                            The cross axis is used to position flex items with the following properties:
-                                            <ol>
-                                                <li>align-items</li>
-                                                <li>align-content</li>
-                                            </ol>
-                                            The main axis and cross axis are interchangeable. We can switch them using the <code>flex-direction</code> property. If we add the <code>flex-direction</code> property and give it a value of <code>column</code>, the flex items will be ordered vertically, not horizontally.
-                                            <br>
-                                            <br>
-                                            The column value tells the browser to stack the divs one on top of the other.
-                                            <br><br>
-                                            The flex-direction property can accept four values:
-                                            <ol>
-                                                <li>row — elements will be positioned from left to right across the parent element starting from the top left corner (default).</li>
-                                                <li>row-reverse — elements will be positioned from right to left across the parent element starting from the top right corner.</li>
-                                                <li>column — elements will be positioned from top to bottom of the parent element starting from the top left corner.</li>
-                                                <li>column-reverse — elements will be positioned from the bottom to the top of the parent element starting from the bottom left corner.</li>
-                                            </ol>
-                                            <strong>!!!Note:</strong> The <code>flex-direction</code> property is declared on flex containers.
-                                        </p>
-                            
-                                        <br><a href="#to-top">To Top</a>
-                                        </td>
-                                        <td class="code">
-                                            <code>
-                                                .container { <br>
-                                                    display: flex; <br>
-                                                    flex-direction: column; <br>
-                                                    width: 1000px; <br>
-                                                  }<br><br>
-                                                  .item { <br>
-                                                    height: 100px; <br>
-                                                    width: 100px; <br>
-                                                  }<br><br>
-                                            </code>
-                                        
-                                        </td>
-                                        </tr>
+<br><a href="#to-top">To Top</a>
+</td>
+<td class="code">
+<code>
+.container { <br>
+width: 200px; <br>
+} <br>
+<br>
 
-                                        <tr id="flex-flow">
-                                            <td class="description">
-                                            <h3>flex-flow</h3>
-                                            <p>
-                                                Like the shorthand <code>flex</code> property, the shorthand <code>flex-flow</code> property is used to declare both the <code>flex-wrap</code> and <code>flex-direction</code> properties in one line.
-                                            </p>
-                                            <strong>!!!Note:</strong> The <code>flex-direction</code> property is declared on flex containers.
-                                
-                                            <br><a href="#to-top">To Top</a>
-                                            </td>
-                                            <td class="code">
-                                                <code>
-                                                    .container { <br>
-                                                        display: flex; <br>
-                                                        flex-wrap: wrap; <br>
-                                                        flex-direction: column; <br>
-                                                      } <br><br>
-                                                    </code>
-                                                Can be done in one declaration
-                                                <code>
-                                                    .container { <br>
-                                                        display: flex; <br>
-                                                        flex-flow: column wrap; <br>
-                                                      } <br><br>
-                                                </code>
-                                            
-                                            
-                                            </td>
-                                            </tr>
+.child { <br>
+display: inline-flex; <br>
+width: 150px; <br>
+height: auto; <br>
+} <br><br>
+</code>
 
-        <!-- Additional row template, replace # with an appropriate ID name
-            <tr id="#">
-            <td class="description">
-            <h3></h3>
+</td>
+</tr>
+<tr id="justify-content">
+<td class="description">
+<h3>justify-content</h3>
+<p>We can specify how flex items spread out from left to right, along the main axis. We will learn more about axes in a later exercise.
+To position the items from left to right, we use a property called   <code>justify-content</code>.
+Five commonly used values for the justify-content properties:
+<ul>
+<li>flex-start - all items will be positioned in order, starting from the left of the parent container, with no extra space between or before them.
+</li>
+<li>flex-end — all items will be positioned in order, with the last item starting on the right side of the parent container, with no extra space between or after them.
+</li>
+<li>center — all items will be positioned in order, in the center of the parent container with no extra space before, between, or after them.
+</li>
+<li>space-around — items will be positioned with equal space before and after each item, resulting in double the space between elements.
+</li>
+<li>space-between — items will be positioned with equal space between them, but no extra space before the first or after the last elements.
+</li>
+</ul>
+</p>
+<br><a href="#to-top">To Top</a>
+</td>
+<td class="code">
+<code>.container { <br>
+display: flex; <br>
+justify-content: flex-end; <br>
+} <br>
+<br>
+</code>
+</td>
+</tr>
+<tr id="align-items">
+<td class="description">
+<h3>align-items</h3>
+<p>The align-items property makes it possible to space flex items vertically. <br>
+Below are five commonly used values for the align-items property:
+<ul>
+<li>flex-start — all elements will be positioned at the top of the parent container.</li>
+<li>flex-end — all elements will be positioned at the bottom of the parent container.</li>
+<li>center — the center of all elements will be positioned halfway between the top and bottom of the parent container.
+</li>
+<li>baseline — the bottom of the content of all items will be aligned with each other.</li>
+<li>stretch — if possible, the items will stretch from top to bottom of the container (this is the default value; elements with a specified height will not stretch; elements with a minimum height or no height specified will stretch).</li>
+</ul>
+These five values tell the elements how to behave along the cross axis of the parent container. 
+</p>
 
-            <br><a href="#to-top">To Top</a>
-            </td>
-            <td class="code">
-            
-            </td>
-            </tr>
-            -->
-        
-    </tbody>
+<br><a href="#to-top">To Top</a>
+</td>
+<td class="code">
+<code>.container { <br>
+align-items: baseline; <br>
+} <br>
+</code>
+</td>
+</tr>
+<tr id="#">
+<td class="description">
+<h3>flex-grow</h3>
+<p>
+All flex items shrink proportionally when the flex container is too small. However, if the parent container is larger than necessary then the flex items will not stretch by default. The <code>flex-grow</code> property allows us to specify if items should grow to fill a container and also which items should grow proportionally more or less than others.<br>
+
+If a max-width is set for an element, it will not grow larger than that even if there is more space for it to absorb.<br>
+
+<code>flex-grow</code><strong> is declared on flex items.</strong> 
+</p>
+
+<br><a href="#to-top">To Top</a>
+</td>
+<td class="code">
+<code>
+.container { <br>
+display: flex;<br>
+} <br><br>
+
+.side {<br>
+width: 100px;<br>
+flex-grow: 1;<br>
+}<br><br>
+
+.center {<br>
+width: 100px;<br>
+flex-grow: 2;<br>
+}<br><br>
+</code>
+</td>
+</tr>
+<tr id="flex-basis">
+<td class="description">
+<h3>flex-basis</h3>
+<p>
+Another way of specifying the width of a flex item is with the <code>flex-basis</code> property. <code>flex-basis</code> allows us to specify the width of an item before it stretches or shrinks. <br>
+If the .container div is larger, the .center div will absorb twice as much space as the .side divs.
+The same would hold true if we assigned flex-shrink values to the divs above as well.
+</p>
+
+<br><a href="#to-top">To Top</a>
+</td>
+<td class="code">
+<code>
+.container { <br>
+display: flex; <br>
+} <br>
+<br>
+.side { <br>
+flex-grow: 1; <br>
+flex-basis: 100px; <br>
+} <br>
+<br>
+.center { <br>
+flex-grow: 2; <br>
+flex-basis: 150px; <br>
+} <br><br>
+</code>
+
+</td>
+</tr>
+<tr id="flex">
+<td class="description">
+<h3>flex</h3>
+<p>
+The shorthand <code>flex</code> property provides a convenient way for specifying how elements stretch and shrink, while simplifying the CSS required. The <code>flex</code> property allows you to declare <code>flex-grow</code>, <code>flex-shrink</code>, and <code>flex-basis</code> all in one line.
+<br><br>
+<strong>!!!The flex property is different from the flex value used for the display property.</strong>
+<br><br>
+The order is: 
+<ol>
+<li><code>flex-grow</code></li>
+<li><code>flex-shrink</code></li>
+<li><code>flex-basis</code></li>
+</ol>
+</p>
+
+<br><a href="#to-top">To Top</a>
+</td>
+<td class="code">
+<code>
+.big { <br>
+flex-grow: 2; <br>
+flex-shrink: 1; <br>
+flex-basis: 150px; <br>
+} <br><br>
+
+.small { <br>
+flex-grow: 1; <br>
+flex-shrink: 2; <br>
+flex-basis: 100px; <br>
+} <br><br>
+</code>
+The same can be done with <code>flex</code> shorthand:<br><br>
+<code>
+big { <br>
+flex: 2 1 150px; <br>
+} <br><br>
+
+.small { <br>
+flex: 1 2 100px; <br>
+} <br><br>
+</code>
+
+</td>
+</tr>
+<tr id="flex-wrap">
+<td class="description">
+<h3>flex-wrap</h3>
+<p>
+Sometimes, we don’t want our content to shrink to fit its container. Instead, we might want flex items to move to the next line when necessary. This can be declared with the <code>flex-wrap</code> property. The <code>flex-wrap</code> property can accept three values:
+<ol>
+<li><code>wrap</code> — child elements of a flex container that don’t fit into a row will move down to the next line.
+</li>
+<li><code>wrap-reverse</code> — the same functionality as wrap, but the order of rows within a flex container is reversed (for example, in a 2-row flexbox, the first row from a wrap container will become the second in wrap-reverse and the second row from the wrap container will become the first in wrap-reverse).
+</li>
+<li><code>nowrap</code> — prevents items from wrapping; this is the default value and is only necessary to override a wrap value set by a different CSS rule.
+</li>
+</ol>
+<strong>!!!Note:</strong> The <code>flex-wrap</code> property is declared on <em>flex containers</em>.
+</p>
+
+<br><a href="#to-top">To Top</a>
+</td>
+<td class="code">
+<code>
+.container { <br>
+display: inline-flex;<br>
+flex-wrap: wrap;<br>
+width: 250px;<br>
+} <br><br>
+
+.item {<br>
+width: 100px;<br>
+height: 100px;<br>
+}<br><br>
+</code>
+
+</td>
+</tr>
+
+<tr id="align-content">
+<td class="description">
+<h3>align-content</h3>
+<p>
+We might have multiple rows of flex items within the same container. If a flex container has multiple rows of content, we can use <code>align-content</code> to space the rows from top to bottom. Below are some of the more commonly used align-content values:
+<ol>
+<li><code>flex-start</code> — all rows of elements will be positioned at the top of the parent container with no extra space between.
+</li>
+<li><code>flex-end</code> — all rows of elements will be positioned at the bottom of the parent container with no extra space between.
+</li>
+<li><code>center</code> — all rows of elements will be positioned at the center of the parent element with no extra space between.
+</li>
+<li><code>space-between</code> — all rows of elements will be spaced evenly from the top to the bottom of the container with no space above the first or below the last.
+</li>
+<li><code>space-around</code> — all rows of elements will be spaced evenly from the top to the bottom of the container with the same amount of space at the top and bottom and between each element.</li>
+<li><code>stretch</code> — if a minimum height or no height is specified, the rows of elements will stretch to fill the parent container from top to bottom (default value).</li>
+</ol>
+</p>
+
+<br><a href="#to-top">To Top</a>
+</td>
+<td class="code">
+<code>
+.container { <br>
+display: flex; <br>
+width: 400px; <br>
+height: 400px; <br>
+flex-wrap: wrap; <br>
+align-content: space-around; <br>
+} <br>
+<br>
+
+.child { <br>
+width: 150px; <br>
+height: 150px; <br>
+} <br><br>
+</code>
+</td>
+</tr>
+
+<tr id="flex-direction">
+<td class="description">
+<h3>flex-direction</h3>
+<p>
+Flex containers have two axes: a main axis and a cross axis. By default, the main axis is horizontal and the cross axis is vertical.
+<br><br>
+The main axis is used to position flex items with the following properties:
+<ol>
+<li>justify-content</li>
+<li>flex-wrap</li>
+<li>flex-grow</li>
+<li>flex-shrink</li>
+</ol>
+The cross axis is used to position flex items with the following properties:
+<ol>
+<li>align-items</li>
+<li>align-content</li>
+</ol>
+The main axis and cross axis are interchangeable. We can switch them using the <code>flex-direction</code> property. If we add the <code>flex-direction</code> property and give it a value of <code>column</code>, the flex items will be ordered vertically, not horizontally.
+<br>
+<br>
+The column value tells the browser to stack the divs one on top of the other.
+<br><br>
+The flex-direction property can accept four values:
+<ol>
+<li>row — elements will be positioned from left to right across the parent element starting from the top left corner (default).</li>
+<li>row-reverse — elements will be positioned from right to left across the parent element starting from the top right corner.</li>
+<li>column — elements will be positioned from top to bottom of the parent element starting from the top left corner.</li>
+<li>column-reverse — elements will be positioned from the bottom to the top of the parent element starting from the bottom left corner.</li>
+</ol>
+<strong>!!!Note:</strong> The <code>flex-direction</code> property is declared on flex containers.
+</p>
+
+<br><a href="#to-top">To Top</a>
+</td>
+<td class="code">
+<code>
+.container { <br>
+display: flex; <br>
+flex-direction: column; <br>
+width: 1000px; <br>
+}<br><br>
+.item { <br>
+height: 100px; <br>
+width: 100px; <br>
+}<br><br>
+</code>
+
+</td>
+</tr>
+
+<tr id="flex-flow">
+<td class="description">
+<h3>flex-flow</h3>
+<p>
+Like the shorthand <code>flex</code> property, the shorthand <code>flex-flow</code> property is used to declare both the <code>flex-wrap</code> and <code>flex-direction</code> properties in one line.
+</p>
+<strong>!!!Note:</strong> The <code>flex-direction</code> property is declared on flex containers.
+
+<br><a href="#to-top">To Top</a>
+</td>
+<td class="code">
+<code>
+.container { <br>
+display: flex; <br>
+flex-wrap: wrap; <br>
+flex-direction: column; <br>
+} <br><br>
+</code>
+Can be done in one declaration
+<code>
+.container { <br>
+display: flex; <br>
+flex-flow: column wrap; <br>
+} <br><br>
+</code>
+
+<tr id="create-grid">
+<td class="description" colspan="2">
+<h3>Create a Grid</h3>
+<p> To set up a grid, you need to have both a grid container and grid items. The grid container will be a parent element that contains grid items as children and applies overarching styling and positioning to them.
+To turn an HTML element into a grid container, you must set the element’s display property to one of two values:
+<ul>
+<li>grid — for a block-level grid.</li>
+<li>inline-grid — for an inline grid.</li>
+</ul>
+Then, you can assign other properties to lay out the grid to suit your needs.
+</p>
+
+<br><a href="#to-top">To Top</a>
+</td>
+<td class="code">
+
+</td>
+</tr>
+
+<tr id="#">
+<td class="description">
+<h3></h3>
+
+<br><a href="#to-top">To Top</a>
+</td>
+<td class="code">
+
+</td>
+</tr>
+
+</td>
+</tr>
+
+<!-- Additional row template, replace # with an appropriate ID name
+<tr id="#">
+<td class="description">
+<h3></h3>
+
+<br><a href="#to-top">To Top</a>
+</td>
+<td class="code">
+
+</td>
+</tr>
+-->
+
+</tbody>
 </table>
 </body>
 
