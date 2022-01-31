@@ -941,6 +941,91 @@ Then, you can assign other properties to lay out the grid to suit your needs.
                                                 
                                                 </td>
                                                 </tr>
+                                                <tr id="grid-template-areas">
+                                                    <td class="description">
+                                                    <h3>Grid Template Areas</h3>
+                                                    <p>
+                                                        The <code>grid-template-areas</code> property allows you to name sections of your web page to use as values in the <code>grid-row-start, grid-row-end, grid-column-start,grid-column-end, and grid-area</code> properties. <br><br>
+                                                        In each ruleset below .container, we use the grid-area property to tell that section to cover the portion of the page specified. The header element spans the first row and both columns. The nav element spans the second row and both columns. The element with class .info spans the third row and left column. The element with class .services spans the third row and right column. The footer element spans the bottom row and both columns.<br><br>
+                                                        <strong>This property is declared on grid containers</strong>.
+                                                    </p>
+                                                    
+                                                    <br><a href="#to-top">To Top</a>
+                                                    </td>
+                                                    <td class="code">
+                                                        <code>
+                                                            .container { <br>
+                                                                display: grid; <br>
+                                                                max-width: 900px; <br>
+                                                                position: relative; <br>
+                                                                margin: auto; <br>
+                                                                grid-template-areas: "head head" <br>
+                                                                                     "nav nav" <br>
+                                                                                     "info services"<br>
+                                                                                     "footer footer"; <br>
+                                                                grid-template-rows: 300px 120px 800px 120px;<br>
+                                                                grid-template-columns: 1fr 3fr; <br>
+                                                              }<br><br>
+                                                              header { <br>
+                                                                grid-area: head; <br>
+                                                              } <br>
+                                                               
+                                                              nav { <br>
+                                                                grid-area: nav;<br>
+                                                              } <br>
+                                                               
+                                                              .info { <br>
+                                                                grid-area: info; <br>
+                                                              } <br>
+                                                               
+                                                              .services { <br>
+                                                                grid-area: services; <br>
+                                                              } <br>
+                                                               
+                                                              footer { <br>
+                                                                grid-area: footer; <br>
+                                                              } <br><br>
+                                                        </code>
+                                                    
+                                                    </td>
+                                                    </tr>
+
+                                                    <tr id="grid-justify-items">
+                                                        <td class="description">
+                                                        <h3>Grid justify-items</h3>
+                                                        <p>
+                                                            There are two axes in a grid layout — the column (or block) axis and the row (or inline) axis.
+
+                                                            The column axis stretches from top to bottom across the web page.
+
+                                                            The row axis stretches from left to right across the web page.
+
+                                                            In the following four exercises, we will learn and use properties that rely on an understanding of grid axes.
+
+                                                            <code>justify-items</code> is a property that positions grid items along the inline, or row, axis. This means that it positions items from left to right across the web page. <strong> This property is declared on grid containers</strong>.
+
+                                                            justify-items accepts these values:
+                                                            <ul>
+                                                                <li>start — aligns grid items to the left side of the grid area</li>
+                                                                <li>end — aligns grid items to the right side of the grid area</li>
+                                                                <li>center — aligns grid items to the center of the grid area</li>
+                                                                <li>stretch — stretches all items to fill the grid area</li>
+                                                            </ul>
+                                                        </p>
+                                                        
+                                                        <br><a href="#to-top">To Top</a>
+                                                        </td>
+                                                        <td class="code">
+                                                            <code>
+                                                                main { <br>
+                                                                    display: grid; <br>
+                                                                    grid-template-columns: repeat(3, 400px); <br>
+                                                                    justify-items: center; <br>
+                                                                  } <br><br>
+                                                            </code>
+                                                        
+                                                        </td>
+                                                        </tr>
 
 
     
