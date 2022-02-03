@@ -1151,6 +1151,84 @@ align-items: center; <br>
     </td>
 </tr>
 
+<tr id="grid-explicit-vs-implicit">
+    <td class="description" colspan="2">
+    <h3>Implicit vs. Explicit CSS Grid</h3>
+    <p>
+        Explicitly defined grid works well in many cases, such as a landing page for a business that will display a specific amount of information at all times. <br><br>
+
+        However, there are instances in which we don’t know how much information we’re going to display. For example, consider online shopping. Often, these web pages include the option at the bottom of the search results to display a certain quantity of results or to display ALL results on a single page. When displaying all results, the web developer can’t know in advance how many elements will be in the search results each time.<br><br>
+
+        What happens if the developer has specified a 3-column, 5-row grid (for a total of 15 items), but the search results return 30?<br><br>
+
+        Something called the implicit grid takes over. The implicit grid is an algorithm built into the specification for CSS Grid that determines default behavior for the placement of elements when there are more than fit into the grid specified by the CSS.<br><br>
+
+        The default behavior of the implicit grid is as follows: items fill up rows first, adding new rows as necessary. New grid rows will only be tall enough to contain the content within them.
+    </p>
+    
+    <br><a href="#to-top">To Top</a>
+    </td>
+    <td class="code">
+    
+    </td>
+</tr>
+
+<tr id="#">
+    <td class="description">
+    <h3>Grid Auto Rows and Grid Auto Columns</h3>
+    <p>
+        CSS Grid provides two properties to specify the size of grid tracks added implicitly: grid-auto-rows and grid-auto-columns. These properties are declared on grid containers. <br><br>
+
+        grid-auto-rows specifies the height of implicitly added grid rows. grid-auto-columns specifies the width of implicitly added grid columns. <br><br>
+
+        grid-auto-rows and grid-auto-columns accept the same values as their explicit counterparts, grid-template-rows and grid-template-columns
+        <ul>
+            <li>pixels (px)</li>
+            <li>percentages (%)</li>
+            <li>fractions (fr)</li>
+            <li>the repeat() function</li>
+        </ul>
+    </p>
+    
+    <br><a href="#to-top">To Top</a>
+    </td>
+    <td class="code">
+        <code>
+            body { <br>
+                display: grid; <br>
+                grid: repeat(2, 100px) / repeat(2, 150px); <br>
+                grid-auto-rows: 50px; <br>
+              } <br><br>
+        </code>
+    
+    </td>
+</tr>
+
+<tr id="grid-auto-flow">
+    <td class="description" colspan="2">
+    <h3>Grid Auto Flow</h3>
+    <p>
+        In addition to setting the dimensions of implicitly-added rows and columns, we can specify the order in which they are rendered.<br><br>
+
+        grid-auto-flow specifies whether new elements should be added to rows or columns, and is declared on grid containers.<br><br>
+
+        grid-auto-flow accepts these values:
+        <ul>
+            <li>row — specifies the new elements should fill rows from left to right and create new rows when there are too many elements (default)</li>
+            <li>column — specifies the new elements should fill columns from top to bottom and create new columns when there are too many elements</li>
+            <li>dense — this keyword invokes an algorithm that attempts to fill holes earlier in the grid layout if smaller elements are added</li>
+        </ul>
+    </p>
+
+    You can pair row or column with dense, like this: grid-auto-flow: row dense;
+    
+    <br><a href="#to-top">To Top</a>
+    </td>
+    <td class="code">
+    
+    </td>
+</tr>
+
 
 <!-- Additional row template, replace # with an appropriate ID name
 <tr id="#">
