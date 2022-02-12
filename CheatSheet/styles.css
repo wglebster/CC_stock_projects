@@ -4,6 +4,8 @@ html{
 body{
     background-color: black;
     color: bisque;
+    display: flex;
+    align-items: baseline;
 }
 @font-face {
     /*Merriweather Sans font & Cutive Mono*/
@@ -14,6 +16,38 @@ caption {
     font-size: 3.5rem;
     font-weight: bold;
     padding-bottom: 2%;
+}
+
+.sidenav{
+    align-self: flex-start;
+    position: sticky;
+    top: 7.5rem;
+    display: inline-block;
+    width: 150rem;
+    border: #9ea3a0 0.5px solid;
+    background-color: #333330;
+}
+.sidenav h3{
+    margin: 0.1rem;
+    font-size: 2.5rem;
+    text-align: center;
+}
+.sidenav li{
+    font-size: 2rem;
+    list-style: none;
+    margin-left: 5%;
+}
+.sidenav ul{
+    font-size: 2.5rem;
+    margin-left: 0%;
+    padding-left: 2%;
+}
+.sidenav a{
+    color: bisque;
+    text-decoration: none;
+}
+.sidenav a:hover{
+    text-decoration: underline;
 }
 
 th {
