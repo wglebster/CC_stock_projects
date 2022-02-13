@@ -8,20 +8,78 @@
 </head>
 
 <body>
+    <!-- Navigation -->
     <nav class="sidenav">
         <h3>Navigation</h3>
-    <ul>
-        Fonts
-        <li><a href="#font-face">CSS @font-face rule</a></li>
-        <li><a href="#external-fonts">CSS Linking fonts</a></li>
-    </ul>
-    <ul>
-        Position
-        <li><a href="#position-relative">Relative position</a></li>
-        <li><a href="#position-absolute">Absolute position</a></li>
-        <li><a href="#position-fixed">Fixed position</a></li>
-    </ul>
+        <ul>
+            Fonts
+            <li><a href="#font-face">CSS @font-face rule</a></li>
+            <li><a href="#external-fonts">CSS Linking fonts</a></li>
+        </ul>
+        <ul>
+            Position
+            <li><a href="#position-relative">Relative position</a></li>
+            <li><a href="#position-absolute">Absolute position</a></li>
+            <li><a href="#postion-fixed">Fixed position</a></li>
+            <li><a href="#position-sticky">Sticky position</a></li>
+        </ul>
+        <ul>
+            Display
+            <li><a href="#display-nline">Display Inline</a></li>
+            <li><a href="#display-block">Display Block</a></li>
+            <li><a href="#display-inline-block">Display Inline Block</a></li>
+        </ul>
+        <ul>
+            Media Queries
+            <li><a href="#media-queries">Media Queries</a></li>
+        </ul>
+        <ul>
+            Breakpoints
+            <li><a href="#breakpoints">Breakpoints</a></li>
+        </ul>
+        <ul>
+            Flexbox
+            <li><a href="#flexbox">Flexbox</a></li>
+            <li><a href="#display-flex">display Flex</a></li>
+            <li><a href="#inline-flex">Inline Flex</a></li>
+            <li><a href="#justify-content">Justify content</a></li>
+            <li><a href="#align-items">Align Items</a></li>
+            <li><a href="#flex-grox">flex-grow</a></li>
+            <li><a href="#flex-basis">flex-basis</a></li>
+            <li><a href="#flex">Shorthand property "flex"</a></li>
+            <li><a href="flex-wrap">flex-wrap</a></li>
+            <li><a href="#align-content">Align content</a></li>
+            <li><a href="#flex-direction">flex direction</a></li>
+            <li><a href="#flex-flow">Flex flow</a></li>
+        </ul>
+
+        <ul>
+            Grid
+            <li><a href="#create-grid">Create grid</a></li>
+            <li><a href="#grid-columns">Grid Columns</a></li>
+            <li><a href="#grid-rows">Grid Rows</a></li>
+            <li><a href="#grid-template-shorthand">Grid Template shorthand</a></li>
+            <li><a href="#fraction">fraction</a></li>
+            <li><a href="#repeat">repeat</a></li>
+            <li><a href="#minmax">minmax</a></li>
+            <li><a href="#grid-gap">grid-gap</a></li>
+            <li><a href="#grid-item-start-end">Grid item start/end</a></li>
+            <li><a href="#grid-items-start-end-shorthand">Grid items start/end shorthand</a></li>
+            <li><a href="#column-row-span">SPAN</a></li>
+            <li><a href="#grid-area">grid area</a></li>
+            <li><a href="#grid-template-areas">Grid template areas</a></li>
+            <li><a href="#grid-justify-items">Justify items</a></li>
+            <li><a href="#grid-justify-content">justify content</a></li>
+            <li><a href="#grid-align-items">align items</a></li>
+            <li><a href="#grid-align-content">align content</a></li>
+            <li><a href="#grid-justify-self-align-self">Grid Justify Self and Align Self</a></li>
+            <li><a href="#grid-explicit-vs-implicit">Implicit vs. Explicit CSS Grid</a></li>
+            <li><a href="#grid-auto-rows-columns">Grid Auto Rows and Grid Auto Columns</a></li>
+            <li><a href="#grid-auto-flow">Grid auto flow</a></li>
+        </ul>
     </nav>
+    <!-- End Navigation -->
+
     <table>
         <caption id="to-top">Cheatsheet to make notes of hard to remember topics</caption>
         <thead>
@@ -150,9 +208,9 @@ top: 240px; <br>
 </code>
                 </td>
             </tr>
-            <tr id="display-inline">
+            <tr id="display">
                 <td class="description" colspan="2">
-                    <h3>Display: inline</h3>
+                    <h3 class="display-inline">Display: inline</h3>
                     <p>The default display for some elements, such as <em>em/strong</em> and <em>a</em>, is called
                         inline. Inline elements have a box that wraps tightly around their content, only taking up the
                         amount of space necessary to display their content
@@ -162,13 +220,13 @@ top: 240px; <br>
                         This includes elements that are not inline by default such as paragraphs, divs, and headings.
                     </p>
 
-                    <h3>Display: Block</h3>
+                    <h3 class="display-block">Display: Block</h3>
                     <p>Some elements are not displayed in the same line as the content around them. These are called
                         block-level elements. These elements fill the entire width of the page by default, but their
                         width property can also be set. Unless otherwise
                         specified, they are the height necessary to accommodate their content.</p>
 
-                    <h3>Display: Inline-Block</h3>
+                    <h3 class="display-inline-block">Display: Inline-Block</h3>
                     <p>The third value for the display property is inline-block. Inline-block display combines features
                         of both inline and block elements. Inline-block elements can appear next to each other and we
                         can specify their dimensions using the width
@@ -438,7 +496,7 @@ align-items: baseline; <br>
 </code>
                 </td>
             </tr>
-            <tr id="#">
+            <tr id="#flex-grow">
                 <td class="description">
                     <h3>flex-grow</h3>
                     <p>
@@ -756,7 +814,7 @@ flex-flow: column wrap; <br>
 </td>
 <td class="code">
 
-<!-- </td>
+</td>
 </tr>
 
 </td>
@@ -1184,7 +1242,7 @@ justify-items: center; <br>
                 </td>
             </tr>
 
-            <tr id="grid-justify-items">
+            <tr id="grid-justify-content">
                 <td class="description">
                     <h3>CSS Grid justify-content</h3>
                     <p>
@@ -1352,7 +1410,7 @@ align-content: center; <br><br>
                 </td>
             </tr>
 
-            <tr id="#">
+            <tr id="#grid-auto-rows-columns">
                 <td class="description">
                     <h3>Grid Auto Rows and Grid Auto Columns</h3>
                     <p>
