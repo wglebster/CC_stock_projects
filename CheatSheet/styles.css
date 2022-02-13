@@ -49,6 +49,12 @@ caption {
 .sidenav a:hover{
     text-decoration: underline;
 }
+.sidenav li{
+    display: none;
+}
+.sidenav ul:hover li{
+    display: block;
+}
 
 th {
     border: #9ea3a0 0.5px solid;
