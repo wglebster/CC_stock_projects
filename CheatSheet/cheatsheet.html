@@ -83,12 +83,21 @@
             <li><a href="#js-variables">JavaScript Variables</a></li>
             <li><a href="#js-if-statement">If Statement</a></li>
             <li><a href="#js-if-else-statement">If...Else Statement</a></li>
+            <li><a href="#js-truthy-falsy">Truthy & Falsy</a></li>
+            <li><a href="#js-ternary-operator">Ternary Operator</a></li>
+            <li><a href="#js-else-if-statement">Else...If</a></li>
+            <li><a href="#js-switch-case">Switch Case</a></li>
+            <li><a href="#js-dafault-function-parameters">Default function parameters</a></li>
+            <li><a href="#js-function-expression">Function Expression</a></li>
+            <li><a href="#js-arrow-function">Arrow Functions</a></li>
+            <li><a href="#js-concise-body-arrow-functions">Concise Body Arrow Functions</a></li>
         </ul>
+
     </nav>
     <!-- End Navigation -->
 
     <table>
-        <caption id="to-top">Cheatsheet to make notes of hard to remember topics</caption>
+        <caption id="to-top">CheatSheet</caption>
         <thead>
             <tr>
                 <th scope="col">Description</th>
@@ -1534,11 +1543,15 @@ grid-auto-rows: 50px; <br>
                 <td class="description">
                     <h3>Create a Variable: const</h3>
                     <p>
-                        A <code>const</code> variable cannot be reassigned because it is constant. If you try to reassign a const variable, you’ll get a TypeError.
+                        A <code>const</code> variable cannot be reassigned because it is constant. If you try to
+                        reassign a const variable, you’ll get a TypeError.
 
-                        Constant variables must be assigned a value when declared. If you try to declare a const variable without a value, you’ll get a SyntaxError.
+                        Constant variables must be assigned a value when declared. If you try to declare a const
+                        variable without a value, you’ll get a SyntaxError.
 
-                        If you’re trying to decide between which keyword to use, <code>let</code> or <code>const</code>, think about whether you’ll need to reassign the variable later on. If you do need to reassign the variable use <code>let</code>, otherwise, use <code>const</code>.
+                        If you’re trying to decide between which keyword to use, <code>let</code> or <code>const</code>,
+                        think about whether you’ll need to reassign the variable later on. If you do need to reassign
+                        the variable use <code>let</code>, otherwise, use <code>const</code>.
                     </p>
 
                     <br><a href="#to-top">To Top</a>
@@ -1554,15 +1567,17 @@ grid-auto-rows: 50px; <br>
 
             <tr id="js-if-statement">
                 <td class="description">
-                <h3>If Statement</h3>
-                <p>
-                    We often perform a task based on a condition. For example, if the weather is nice today, then we will go outside. If the alarm clock rings, then we’ll shut it off. If we’re tired, then we’ll go to sleep.
-                    <br><br>
+                    <h3>If Statement</h3>
+                    <p>
+                        We often perform a task based on a condition. For example, if the weather is nice today, then we
+                        will go outside. If the alarm clock rings, then we’ll shut it off. If we’re tired, then we’ll go
+                        to sleep.
+                        <br><br>
 
-                    In programming, we can also perform a task based on a condition using an if statement:
-                </p>
-                
-                <br><a href="#to-top">To Top</a>
+                        In programming, we can also perform a task based on a condition using an if statement:
+                    </p>
+
+                    <br><a href="#to-top">To Top</a>
                 </td>
                 <td class="code">
                     <code>
@@ -1572,21 +1587,23 @@ grid-auto-rows: 50px; <br>
                           // Prints: This message will print! 
                           <br><br>
                     </code>
-                
-                </td>
-                </tr>
 
-                <tr id="js-if-else-statement">
-                    <td class="description">
+                </td>
+            </tr>
+
+            <tr id="js-if-else-statement">
+                <td class="description">
                     <h3>If...Else Statement</h3>
                     <p>
-                        If we wanted to add some default behavior to the if statement, we can add an else statement to run a block of code when the condition evaluates to false. Take a look at the inclusion of an else statement.
+                        If we wanted to add some default behavior to the if statement, we can add an else statement to
+                        run a block of code when the condition evaluates to false. Take a look at the inclusion of an
+                        else statement.
                     </p>
-                    
+
                     <br><a href="#to-top">To Top</a>
-                    </td>
-                    <td class="code">
-                        <code>
+                </td>
+                <td class="code">
+                    <code>
                             if (false) { <br>
                                 console.log('The code in this block will not run.'); <br>
                               } else { <br>
@@ -1594,6 +1611,240 @@ grid-auto-rows: 50px; <br>
                               } <br>
                                
                               // Prints: But the code in this block will! <br><br>
+                        </code>
+
+                </td>
+            </tr>
+
+            <tr id="js-truthy-falsy">
+                <td class="description">
+                    <h3>Truthy & Falsy</h3>
+                    <p>
+                        Sometimes, you’ll want to check if a variable exists and you won’t necessarily want it to equal
+                        a specific value — you’ll only check to see if the variable has been assigned a value.
+
+                        The list of falsy values includes:
+                    <ul>
+                        <li>0</li>
+                        <li>Empty strings like "" or ''</li>
+                        <li>null which represent when there is no value at all</li>
+                        <li>undefined which represent when a declared variable lacks a value</li>
+                        <li>NaN, or Not a Number</li>
+                    </ul>
+                    </p>
+
+                    <br><a href="#to-top">To Top</a>
+                </td>
+                <td class="code">
+                    <code>
+                                let myVariable = 'I Exist!'; <br>
+ 
+                                if (myVariable) { <br>
+                                console.log(myVariable) <br>
+                                } else { <br>
+                                console.log('The variable does not exist.') <br>
+                                } <br>
+                                 
+                                <br><br>
+
+
+
+                            </code>
+
+                </td>
+            </tr>
+
+            <tr id="js-ternary-operator">
+                <td class="description">
+                    <h3>Ternary Operator</h3>
+                    <p>
+                        In the spirit of using short-hand syntax, we can use a ternary operator to simplify an if...else
+                        statement.
+                    </p>
+
+                    <br><a href="#to-top">To Top</a>
+                </td>
+                <td class="code">
+                    <code>
+                    let isNightTime = true; <br>
+
+                    if (isNightTime) { <br>
+                    console.log('Turn on the lights!'); <br>
+                    } else { <br>
+                    console.log('Turn off the lights!'); <br>
+                    } <br><br>
+                    </code>
+                    the same can be achieved with Ternary Operator: <br><br>
+                    <code>
+                        isNightTime ? console.log('Turn on the lights!') : console.log('Turn off the lights!');
+                    </code>
+
+                </td>
+            </tr>
+
+            <tr id="js-else-if-statement">
+                <td class="description">
+                    <h3>Else...If Statement</h3>
+                    <p>
+                        The else if statement allows for more than two possible outcomes. You can add as many else if
+                        statements as you’d like, to make more complex conditionals!
+
+                        The else if statement always comes after the if statement and before the else statement. The
+                        else if statement also takes a condition.
+                    </p>
+
+                    <br><a href="#to-top">To Top</a>
+                </td>
+                <td class="code">
+                    <code>
+                        let stopLight = 'yellow'; <br>
+ 
+                        if (stopLight === 'red') { <br>
+                        console.log('Stop!');<br>
+                        } else if (stopLight === 'yellow') {<br>
+                        console.log('Slow down.');<br>
+                        } else if (stopLight === 'green') {<br>
+                        console.log('Go!');<br>
+                        } else { <br>
+                        console.log('Caution, unknown!');<br>
+                        }
+                    </code>
+
+                </td>
+            </tr>
+
+            <tr id="js-switch-case">
+                <td class="description">
+                    <h3>Swith Case</h3>
+                    <p>
+                        A switch statement provides an alternative syntax to else...if that is easier to read and write.
+                    </p>
+
+                    <br><a href="#to-top">To Top</a>
+                </td>
+                <td class="code">
+                    <code>
+                        let groceryItem = 'papaya'; <br><br>
+ 
+                        switch (groceryItem) {<br>
+                        case 'tomato': <br>
+                            console.log('Tomatoes are $0.49');<br>
+                            break;<br>
+                        case 'lime': <br>
+                            console.log('Limes are $1.49'); <br>
+                            break; <br>
+                        case 'papaya': <br>
+                            console.log('Papayas are $1.29'); <br>
+                            break; <br>
+                        default: <br>
+                            console.log('Invalid item'); <br>
+                            break; <br>
+                        } <br><br>
+                        
+                        // Prints 'Papayas are $1.29'
+                    </code>
+                </td>
+            </tr>
+
+            <tr id="js-dafault-function-parameters">
+                <td class="description">
+                    <h3>Default function parameters</h3>
+                    <p>
+                        Default parameters allow parameters to have a predetermined value in case there is no argument
+                        passed into the function or if the argument is undefined when called.
+                    </p>
+
+                    <br><a href="#to-top">To Top</a>
+                </td>
+                <td class="code">
+                    <code>
+                                function greeting (name = 'stranger') { <br>
+                                    console.log(`Hello, ${name}!`)<br>
+                                  } <br><br>
+                                   
+                                  greeting('Nick') <br>// Output: Hello, Nick!<br>
+                                  greeting() <br>// Output: Hello, stranger!
+                                   
+                            </code>
+
+                </td>
+            </tr>
+
+            <tr id="js-function-expression">
+                <td class="description">
+                    <h3>Function Expression</h3>
+                    <p>
+                        To define a function inside an expression, we can use the function keyword. In a function
+                        expression, the function name is usually omitted. A function with no name is called an anonymous
+                        function. A function expression is often stored in a variable in order to refer to it. <br>
+                        To declare a function expression:
+                    <ol>
+                        <li>Declare a variable to make the variable’s name be the name, or identifier, of your function.
+                            Since the release of ES6, it is common practice to use const as the keyword to declare the
+                            variable.
+                        </li>
+                        <li>
+                            Assign as that variable’s value an anonymous function created by using the function keyword
+                            followed by a set of parentheses with possible parameters. Then a set of curly braces that
+                            contain the function body.
+                        </li>
+                    </ol>
+                    To invoke a function expression, write the name of the variable in which the function is stored
+                    followed by parentheses enclosing any arguments being passed into the function.
+                    </p>
+
+                    <br><a href="#to-top">To Top</a>
+                </td>
+                <td class="code">
+                    <code>
+                                    const plantNeedsWater = function(day){ <br>
+                                        return day === "Wednesday" ? true : false; <br>
+                                      }; <br><br>
+                                      console.log(plantNeedsWater("Wednesday"));<br><br>
+                                      //Prints: true
+
+                                </code>
+
+                </td>
+            </tr>
+
+            <tr id="js-arrow-function">
+                <td class="description">
+                <h3>Arrow Functions</h3>
+                <p>
+                    Arrow functions remove the need to type out the keyword function every time you need to create a function. Instead, you first include the parameters inside the ( ) and then add an arrow => that points to the function body surrounded in { }.
+                </p>
+                
+                <br><a href="#to-top">To Top</a>
+                </td>
+                <td class="code">
+                    <code>
+                        const rectangleArea = (width, height) => { <br>
+                            let area = width * height; <br>
+                            return area; <br>
+                          }; <br><br>
+                    </code>
+                
+                </td>
+                </tr>
+
+                <tr id="js-concise-body-arrow-functions">
+                    <td class="description">
+                    <h3>Concise Body Arrow Functions</h3>
+                    <p>
+                        JavaScript also provides several ways to refactor arrow function syntax. The most condensed form of the function is known as concise body. <br>
+                        <ol>
+                            <li>Functions that take only a single parameter do not need that parameter to be enclosed in parentheses. However, if a function takes zero or multiple parameters, parentheses are required.</li>
+                            <li>A function body composed of a single-line block does not need curly braces. Without the curly braces, whatever that line evaluates will be automatically returned. The contents of the block should immediately follow the arrow => and the return keyword can be removed. This is referred to as implicit return.</li>
+                        </ol>
+                    </p>
+                    
+                    <br><a href="#to-top">To Top</a>
+                    </td>
+                    <td class="code">
+                        <code>
+                            const plantNeedsWater = day => <br>
+                            day === 'Wednesday' ? true : false;
                         </code>
                     
                     </td>
@@ -1604,10 +1855,16 @@ grid-auto-rows: 50px; <br>
 <tr id="#">
 <td class="description">
 <h3></h3>
+<p>
+
+</p>
 
 <br><a href="#to-top">To Top</a>
 </td>
 <td class="code">
+    <code>
+        
+    </code>
 
 </td>
 </tr>
