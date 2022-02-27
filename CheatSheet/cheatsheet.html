@@ -91,7 +91,27 @@
             <li><a href="#js-function-expression">Function Expression</a></li>
             <li><a href="#js-arrow-function">Arrow Functions</a></li>
             <li><a href="#js-concise-body-arrow-functions">Concise Body Arrow Functions</a></li>
+            <li><a href="#js-arrays">Arrays</a></li>
+            <li><a href="#js-accessing-arrays">Accessing Arrays</a></li>
+            <li><a href="#js-update-array-elements">Update Elements</a></li>
+            <li><a href="#js-length">.length</a></li>
+            <li><a href="#js-push">.push()</a></li>
+            <li><a href="#js-pop">.pop()</a></li>
+            <li><a href="#js-shift-unshift">.shift() / .unshift()</a></li>
+            <li><a href="#js-slice">.slice()</a></li>
+            <li><a href="#js-indexof">.ondexOf()</a></li>
+            <li><a href="#js-for-loop">For loop</a></li>
+            <li><a href="#js-for-loop-reverse"></a></li>
+            <li><a href="#js-looping-arrays">Looping through Arrays</a></li>
+            <li><a href="#js-nested-loops">Nested Loops</a></li>
+            <li><a href="#js-while-loop">While Loop</a></li>
+            <li><a href="#js-do-while">Do...While</a></li>
+            <li><a href="#js-break-keyword">break keyword</a></li>
         </ul>
+
+        <!-- add new menu item
+            <li><a href="#"></a></li> 
+        -->
 
     </nav>
     <!-- End Navigation -->
@@ -1810,12 +1830,14 @@ grid-auto-rows: 50px; <br>
 
             <tr id="js-arrow-function">
                 <td class="description">
-                <h3>Arrow Functions</h3>
-                <p>
-                    Arrow functions remove the need to type out the keyword function every time you need to create a function. Instead, you first include the parameters inside the ( ) and then add an arrow => that points to the function body surrounded in { }.
-                </p>
-                
-                <br><a href="#to-top">To Top</a>
+                    <h3>Arrow Functions</h3>
+                    <p>
+                        Arrow functions remove the need to type out the keyword function every time you need to create a
+                        function. Instead, you first include the parameters inside the ( ) and then add an arrow => that
+                        points to the function body surrounded in { }.
+                    </p>
+
+                    <br><a href="#to-top">To Top</a>
                 </td>
                 <td class="code">
                     <code>
@@ -1824,33 +1846,447 @@ grid-auto-rows: 50px; <br>
                             return area; <br>
                           }; <br><br>
                     </code>
-                
-                </td>
-                </tr>
 
-                <tr id="js-concise-body-arrow-functions">
-                    <td class="description">
+                </td>
+            </tr>
+
+            <tr id="js-concise-body-arrow-functions">
+                <td class="description">
                     <h3>Concise Body Arrow Functions</h3>
                     <p>
-                        JavaScript also provides several ways to refactor arrow function syntax. The most condensed form of the function is known as concise body. <br>
-                        <ol>
-                            <li>Functions that take only a single parameter do not need that parameter to be enclosed in parentheses. However, if a function takes zero or multiple parameters, parentheses are required.</li>
-                            <li>A function body composed of a single-line block does not need curly braces. Without the curly braces, whatever that line evaluates will be automatically returned. The contents of the block should immediately follow the arrow => and the return keyword can be removed. This is referred to as implicit return.</li>
-                        </ol>
+                        JavaScript also provides several ways to refactor arrow function syntax. The most condensed form
+                        of the function is known as concise body. <br>
+                    <ol>
+                        <li>Functions that take only a single parameter do not need that parameter to be enclosed in
+                            parentheses. However, if a function takes zero or multiple parameters, parentheses are
+                            required.</li>
+                        <li>A function body composed of a single-line block does not need curly braces. Without the
+                            curly braces, whatever that line evaluates will be automatically returned. The contents of
+                            the block should immediately follow the arrow => and the return keyword can be removed. This
+                            is referred to as implicit return.</li>
+                    </ol>
                     </p>
-                    
+
                     <br><a href="#to-top">To Top</a>
-                    </td>
-                    <td class="code">
-                        <code>
+                </td>
+                <td class="code">
+                    <code>
                             const plantNeedsWater = day => <br>
                             day === 'Wednesday' ? true : false;
                         </code>
-                    
-                    </td>
-                    </tr>
+
+                </td>
+            </tr>
+
+            <tr id="js-arrays">
+                <td class="description">
+                    <h3>Arrays</h3>
+                    <p>
+                        Arrays can store any data types (including strings, numbers, and booleans). Like lists, arrays
+                        are ordered, meaning each item has a numbered position.
+                    </p>
+
+                    <br><a href="#to-top">To Top</a>
+                </td>
+                <td class="code">
+                    <code>
+                                let concepts = <br>
+                                ['creating arrays', 'array structures',<br>
+                                 'array manipulation']
+                            </code>
+
+                </td>
+            </tr>
+
+            <tr id="js-accessing-arrays">
+                <td class="description">
+                    <h3>Accessing Arrays</h3>
+                    <p>
+                        Each element in an array has a numbered position known as its index. We can access individual
+                        items using their index, which is similar to referencing an item in a list based on the item’s
+                        position.<br>
+
+                        Arrays in JavaScript are zero-indexed, meaning the positions start counting from 0 rather than
+                        1. Therefore, the first item in an array will be at position 0.
+                    </p>
+
+                    <br><a href="#to-top">To Top</a>
+                </td>
+                <td class="code">
+                    <code>
+                                    const hello = 'Hello World'; <br>
+                                    console.log(hello[6]); <br>
+                                    // Output: W <br>
+                                </code>
+
+                </td>
+            </tr>
+
+            <tr id="js-update-array-elements">
+                <td class="description">
+                    <h3>Update Elements</h3>
+                    <p>
+                        Once you have access to an element in an array, you can update its value.
+                    </p>
+
+                    <br><a href="#to-top">To Top</a>
+                </td>
+                <td class="code">
+                    <code>
+                                        let seasons = ['Winter', 'Spring', 'Summer', 'Fall']; <br> 
+                                        seasons[3] = 'Autumn'; <br>
+                                        console.log(seasons); <br>
+                                        //Output: ['Winter', 'Spring', 'Summer', 'Autumn'] <br><br>
+                                    </code>
+
+                </td>
+            </tr>
+
+            <tr id="js-length">
+                <td class="description">
+                    <h3>.length</h3>
+                    <p>
+                        One of an array’s built-in properties is length and it returns the number of items in the array.
+                        We access the .length property just like we do with strings.
+                    </p>
+
+                    <br><a href="#to-top">To Top</a>
+                </td>
+                <td class="code">
+                    <code>
+                                            const newYearsResolutions = ['Keep a journal', 'Take a falconry class']; <br> 
+                                            console.log(newYearsResolutions.length); <br>
+                                            // Output: 2 <br>
+                                        </code>
+
+                </td>
+            </tr>
+
+            <tr id="js-push">
+                <td class="description">
+                    <h3>.push()</h3>
+                    <p>
+                        .push() allows us to add items to the end of an array. can take a single argument or multiple
+                        arguments separated by commas. .push() changes, or mutates Arrays. It is referred to as a
+                        destructive array method since it changes the initial array.
+                    </p>
+
+                    <br><a href="#to-top">To Top</a>
+                </td>
+                <td class="code">
+                    <code>
+                                                const itemTracker = ['item 0', 'item 1', 'item 2']; <br> 
+                                                itemTracker.push('item 3', 'item 4'); <br>                                                
+                                                console.log(itemTracker); <br><br>
+                                                // Output: ['item 0', 'item 1', 'item 2', 'item 3', 'item 4']; <br>
+                                            </code>
+
+                </td>
+            </tr>
+
+            <tr id="js-pop">
+                <td class="description">
+                    <h3>.pop()</h3>
+                    <p>
+                        .pop(), removes the last item of an array. This method mutates the initial array.
+                    </p>
+
+                    <br><a href="#to-top">To Top</a>
+                </td>
+                <td class="code">
+                    <code>
+                                                    const newItemTracker = ['item 0', 'item 1', 'item 2']; <br> 
+                                                    const removed = newItemTracker.pop(); <br>
+                                                    console.log(newItemTracker); <br>
+                                                    // Output: [ 'item 0', 'item 1' ] <br>
+                                                    console.log(removed); <br>
+                                                    // Output: item 2 <br>
+                                                </code>
+
+                </td>
+            </tr>
+
+            <tr id="js-shift-unshift">
+                <td class="description">
+                    <h3>.shift() / .unshift()</h3>
+                    <p>
+                        The .shift() method removes the first element from an array and returns that removed element.
+                        This method changes the length of the array. <br> <br>
+
+                        The .unshift() method adds one or more elements to the beginning of an array and returns the new
+                        length of the array.
+                    </p>
+
+                    <br><a href="#to-top">To Top</a>
+                </td>
+                <td class="code">
+                    <code>
+                                                        const array1 = [1, 2, 3]; <br>
+                                                        const firstElement = array1.shift(); <br>
+                                                        console.log(array1); <br>
+                                                        // expected output: Array [2, 3] <br>
+                                                        console.log(firstElement); <br>
+                                                        // expected output: 1 <br><br><br>
 
 
+                                                        const array1 = [1, 2, 3]; <br>
+                                                        console.log(array1.unshift(4, 5)); <br>
+                                                        // expected output: 5 <br>
+                                                        console.log(array1); <br>
+                                                        // expected output: Array [4, 5, 1, 2, 3] <br><br>                                                        
+                                                    </code>
+
+                </td>
+            </tr>
+
+            <tr id="js-slice">
+                <td class="description">
+                    <h3>.slice()</h3>
+                    <p>
+                        The slice() method returns a shallow copy of a portion of an array into a new array object
+                        selected from start to end (end not included) where start and end represent the index of items
+                        in that array. The original array will not be modified.
+                    </p>
+
+                    <br><a href="#to-top">To Top</a>
+                </td>
+                <td class="code">
+                    <code>
+                                                            const animals = ['ant', 'bison', 'camel', 'duck', 'elephant']; <br>
+                                                            console.log(animals.slice(2)); <br>
+                                                            // expected output: Array ["camel", "duck", "elephant"] <br>
+                                                            console.log(animals.slice(2, 4)); <br>
+                                                            // expected output: Array ["camel", "duck"] <br>
+                                                        </code>
+
+                </td>
+            </tr>
+
+            <tr id="js-indexof">
+                <td class="description">
+                    <h3>.indexOf()</h3>
+                    <p>
+                        The indexOf() method returns the first index at which a given element can be found in the array,
+                        or -1 if it is not present.
+                    </p>
+
+                    <br><a href="#to-top">To Top</a>
+                </td>
+                <td class="code">
+                    <code>
+                                                                const beasts = ['ant', 'bison', 'camel', 'duck', 'bison']; <br>
+                                                                console.log(beasts.indexOf('bison')); <br>
+                                                                // expected output: 1 <br>
+                                                            </code>
+
+                </td>
+            </tr>
+
+            <tr id="js-for-loop">
+                <td class="description">
+                    <h3>For loop</h3>
+                    <p>
+                        The typical for loop includes an iterator variable that usually appears in all three
+                        expressions. The iterator variable is initialized, checked against the stopping condition, and
+                        assigned a new value on each loop iteration. Iterator variables can have any name, but it’s best
+                        practice to use a descriptive variable name.
+
+                        A for loop contains three expressions separated by ; inside the parentheses:
+
+                    <ol>
+                        <li>an initialization starts the loop and can also be used to declare the iterator variable.
+                        </li>
+                        <li>a stopping condition is the condition that the iterator variable is evaluated against— if
+                            the condition evaluates to true the code block will run, and if it evaluates to false the
+                            code will stop.</li>
+                        <li>an iteration statement is used to update the iterator variable on each loop.</li>
+                    </ol>
+                    </p>
+
+                    <br><a href="#to-top">To Top</a>
+                </td>
+                <td class="code">
+                    <code>
+                                                                    for (let counter = 0; counter < 4; counter++) { <br>
+                                                                        console.log(counter); <br>
+                                                                      } <br>
+                                                                </code>
+
+                </td>
+            </tr>
+
+            <tr id="js-for-loop-reverse">
+                <td class="description">
+                    <h3>Reverse For loop</h3>
+                    <p>
+                        To run a backward for loop, we must:
+                    <ol>
+                        <li>Set the iterator variable to the highest desired value in the initialization expression.
+                        </li>
+                        <li>Set the stopping condition for when the iterator variable is less than the desired amount.
+                        </li>
+                        <li>The iterator should decrease in intervals after each iteration.</li>
+                    </ol>
+
+                    </p>
+
+                    <br><a href="#to-top">To Top</a>
+                </td>
+                <td class="code">
+                    <code>
+                        for (let counter = 3; counter >= 0; counter --){ <br>
+                            console.log(counter); <br>
+                          }
+                    </code>
+
+                </td>
+            </tr>
+
+            <tr id="js-looping-arrays">
+                <td class="description">
+                    <h3>Looping through Arrays</h3>
+                    <p>
+                        for loops are very handy for iterating over data structures. For example, we can use a for loop
+                        to perform the same operation on each element on an array. Arrays hold lists of data, like
+                        customer names or product information. Imagine we owned a store and wanted to increase the price
+                        of every product in our catalog. That could be a lot of repeating code, but by using a for loop
+                        to iterate through the array we could accomplish this task easily.
+
+                        To loop through each element in an array, a for loop should use the array’s .length property in
+                        its condition.
+                    </p>
+
+                    <br><a href="#to-top">To Top</a>
+                </td>
+                <td class="code">
+                    <code>
+                        const animals = ['Grizzly Bear', 'Sloth', 'Sea Lion']; <br>
+                        for (let i = 0; i < animals.length; i++){ <br>
+                        console.log(animals[i]); <br>
+}
+                    </code>
+
+                </td>
+            </tr>
+
+            <tr id="js-nested-loops">
+                <td class="description">
+                    <h3>Nested Loops</h3>
+                    <p>
+                        When we have a loop running inside another loop, we call that a nested loop. One use for a
+                        nested for loop is to compare the elements in two arrays. For each round of the outer for loop,
+                        the inner for loop will run completely. <br><br>
+
+                        Let’s think about what’s happening in the nested loop in our example. For each element in the
+                        outer loop array, myArray, the inner loop will run in its entirety comparing the current element
+                        from the outer array, myArray[i], to each element in the inner array, yourArray[j]. When it
+                        finds a match, it prints a string to the console.
+
+                    </p>
+
+                    <br><a href="#to-top">To Top</a>
+                </td>
+                <td class="code">
+                    <code>
+                            const myArray = [6, 19, 20]; <br>
+                            const yourArray = [19, 81, 2]; <br>
+                            for (let i = 0; i < myArray.length; i++) { <br>
+                            for (let j = 0; j < yourArray.length; j++) { <br>
+                                if (myArray[i] === yourArray[j]) { <br>
+                                console.log('Both loops have the number: ' + yourArray[j]) <br>
+                                } <br>
+                            } <br>
+                            }; <br>
+                        </code>
+
+                </td>
+            </tr>
+
+            <tr id="js-while-loop">
+                <td class="description">
+                    <h3>While loop</h3>
+                    <p>
+                        The syntax of a for loop is ideal when we know how many times the loop should run, but we don’t
+                        always know this in advance. Think of eating like a while loop: when you start taking bites, you
+                        don’t know the exact number you’ll need to become full. Rather you’ll eat while you’re hungry.
+                        In situations when we want a loop to execute an undetermined number of times, while loops are
+                        the best choice.
+                    </p>
+
+                    <br><a href="#to-top">To Top</a>
+                </td>
+                <td class="code">
+                    <code>
+                                let counterTwo = 1; <br>
+                                while (counterTwo < 4) { <br>
+                                console.log(counterTwo); <br>
+                                counterTwo++; <br>
+                                } <br>
+                            </code>
+
+                </td>
+            </tr>
+
+            <tr id="js-do-while">
+                <td class="description">
+                    <h3>Do...While</h3>
+                    <p>
+                        In some cases, you want a piece of code to run at least once and then loop based on a specific
+                        condition after its initial run. This is where the do...while statement comes in. <br><br>
+
+                        A do...while statement says to do a task once and then keep doing it until a specified condition
+                        is no longer met.
+                    </p>
+
+                    <br><a href="#to-top">To Top</a>
+                </td>
+                <td class="code">
+                    <code>
+                                    let countString = ''; <br>
+                                    let i = 0; <br>
+                                    
+                                    do {
+                                    countString = countString + i;
+                                    i++;
+                                    } while (i < 5);
+                                    
+                                    console.log(countString);
+                                </code>
+
+                </td>
+            </tr>
+
+            <tr id="js-break-keyword">
+                <td class="description">
+                    <h3>break keyword</h3>
+                    <p>
+                        In our code, when we want to stop a loop from continuing to execute even though the original
+                        stopping condition we wrote for our loop hasn’t been met, we can use the keyword break. <br><br>
+
+                        The break keyword allows programs to “break” out of the loop from within the loop’s block.
+                        <br><br>
+
+                        break statements can be especially helpful when we’re looping through large data structures!
+                        With breaks, we can add test conditions besides the stopping condition, and exit the loop when
+                        they’re met.
+                    </p>
+
+                    <br><a href="#to-top">To Top</a>
+                </td>
+                <td class="code">
+                    <code>
+                                        for (let i = 0; i < 99; i++) { <br>
+                                            if (i > 2 ) { <br>
+                                               break; <br>
+                                            } <br>
+                                            console.log('Banana.'); <br>
+                                          } <br>
+                                           
+                                          console.log('Orange you glad I broke out the loop!'); <br>
+                                    </code>
+
+                </td>
+            </tr>
             <!-- Additional row template, replace # with an appropriate ID name
 <tr id="#">
 <td class="description">
