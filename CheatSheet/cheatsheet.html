@@ -99,7 +99,7 @@
             <li><a href="#js-pop">.pop()</a></li>
             <li><a href="#js-shift-unshift">.shift() / .unshift()</a></li>
             <li><a href="#js-slice">.slice()</a></li>
-            <li><a href="#js-indexof">.ondexOf()</a></li>
+            <li><a href="#js-indexof">.IndexOf()</a></li>
             <li><a href="#js-for-loop">For loop</a></li>
             <li><a href="#js-for-loop-reverse"></a></li>
             <li><a href="#js-looping-arrays">Looping through Arrays</a></li>
@@ -107,6 +107,7 @@
             <li><a href="#js-while-loop">While Loop</a></li>
             <li><a href="#js-do-while">Do...While</a></li>
             <li><a href="#js-break-keyword">break keyword</a></li>
+            <li><a href="#js-for-of-loop">For...Of Loop</a></li>
         </ul>
 
         <!-- add new menu item
@@ -2287,6 +2288,51 @@ grid-auto-rows: 50px; <br>
 
                 </td>
             </tr>
+
+            <tr id="js-for-of-loop">
+                <td class="description">
+                <h3>For...Of loop</h3>
+                <p>
+                    One of the primary uses of the for...of loop is iterating through the items of an array. <br><br>
+
+                    for...of has the advantage of setting up most of your loop parameters for you, but sometimes it is necessary to reclaim some control of how iteration is managed. One way of doing this is using JavaScript’s break and continue statements. <br><br>
+
+                    The break statement can be used to jump out of a loop. <br><br>
+
+                    The continue statement is used to skip one iteration of the loop.
+                </p>
+                
+                <br><a href="#to-top">To Top</a>
+                </td>
+                <td class="code">
+                    <code>
+                        const fruits = ['oranges', 'apples', 'grapes']; <br>
+ 
+                        for (const fruit of fruits) {<br>
+                        console.log(fruit); <br>
+                        } <br><br>
+
+                        const strangeBirds = ['Shoebill', 'Cockatrice', 'Basan', 'Terrorbird','Parotia','Kakapo'];  <br>
+ 
+                        for (const bird of strangeBirds) { <br>
+                        if (bird === 'Basan'){ <br>
+                            break; <br>
+                        } <br>
+                        console.log(bird); <br>
+                        } <br><br>
+
+                        const strangeBirds = ['Shoebill', 'Cockatrice', 'Basan', 'Cow', 'Terrorbird', 'Parotia', 'Kakapo']; <br>
+ 
+                        for (const bird of strangeBirds) { <br>
+                        if  (bird === 'Cow'){ <br>
+                            continue; <br>
+                        } <br>
+                        console.log(bird); <br>
+                        } <br>
+                    </code>
+                
+                </td>
+                </tr>
             <!-- Additional row template, replace # with an appropriate ID name
 <tr id="#">
 <td class="description">
