@@ -2412,6 +2412,131 @@ grid-auto-rows: 50px; <br>
 
                 </td>
             </tr>
+
+            <tr id="js-assign-properties">
+                <td class="description">
+                <h3>Object Property Assignment</h3>
+                <p>
+                    Objects are mutable meaning we can update them after we create them! <br>
+
+                    We can use either dot notation, ., or bracket notation, [], and the assignment operator, = to add new key-value pairs to an object or change an existing property.  <br>
+                    One of two things can happen with property assignment:
+                    <ul>
+                        <li>If the property already exists on the object, whatever value it held before will be replaced with the newly assigned value.</li>
+                        <li>If there was no property with that name, a new property will be added to the object.</li>
+                    </ul>
+                    It’s important to know that although we can’t reassign an object declared with const, we can still mutate it, meaning we can add new properties and change the properties that are there.       <br><br>
+
+                    to DELETE a property, use keyword <code>delete</code>.
+                </p>
+                
+                <br><a href="#to-top">To Top</a>
+                </td>
+                <td class="code">
+                    <code>
+                        const spaceship = {type: 'shuttle'}; <br>
+                        spaceship = {type: 'alien'}; // TypeError: Assignment to constant variable. <br>
+                        spaceship.type = 'alien'; // Changes the value of the type property <br>
+                        spaceship.speed = 'Mach 5'; // Creates a new key of 'speed' with a value of 'Mach 5' <br><br>
+
+                        const spaceship = { <br>
+                            'Fuel Type': 'Turbo Fuel', <br>
+                            homePlanet: 'Earth', <br>
+                            mission: 'Explore the universe' <br> 
+                          }; <br>
+                           
+                          delete spaceship.mission;  // Removes the mission property <br>
+                    </code>
+                
+                </td>
+                </tr>
+
+                <tr id="js-object-methods">
+                    <td class="description">
+                    <h3>Methods</h3>
+                    <p>
+                        When the data stored on an object is a function we call that a method. A property is what an object has, while a method is what an object does. <br><br>
+
+                        Do object methods seem familiar? That’s because you’ve been using them all along! For example console is a global javascript object and .log() is a method on that object. Math is also a global javascript object and .floor() is a method on it. <br><br>
+
+                        We can include methods in our object literals by creating ordinary, comma-separated key-value pairs. The key serves as our method’s name, while the value is an anonymous function expression. <br><br>
+                        
+                        With the new method syntax introduced in ES6 we can omit the colon and the function keyword. <br><br>
+
+                        Object methods are invoked by appending the object’s name with the dot operator followed by the method name and parentheses.
+                    </p>
+                    
+                    <br><a href="#to-top">To Top</a>
+                    </td>
+                    <td class="code">
+                        <code>
+                            const alienShip = { <br>
+                                invade: function () { <br> 
+                                  console.log('Hello! We have come to dominate your planet. Instead of Earth, it shall be called New Xaculon.') <br>
+                                } <br>
+                              }; <br><br>
+                            slightly different syntax: <br><br>
+                            const alienShip = { <br>
+                                invade () { <br>
+                                  console.log('Hello! We have come to dominate your planet. Instead of Earth, it shall be called New Xaculon.') <br>
+                                } <br>
+                              }; <br><br>
+
+                              alienShip.invade(); // Prints 'Hello! We have come to dominate your planet. Instead of Earth, it shall be called New Xaculon.'
+                            
+                        </code>
+                    
+                    </td>
+                    </tr>
+
+                    <tr id="js-nested-objects">
+                        <td class="description">
+                        <h3>Nested Objects</h3>
+                        <p>
+                            In application code, objects are often nested— an object might have another object as a property which in turn could have a property that’s an array of even more objects!
+
+                            In our spaceship object, we want a crew object. This will contain all the crew members who do important work on the craft. Each of those crew members are objects themselves. They have properties like name, and degree, and they each have unique methods based on their roles. We can also nest other objects in the spaceship such as a telescope or nest details about the spaceship’s computers inside a parent nanoelectronics object.  <br><br>
+                            
+                            We can chain operators to access nested properties. We’ll have to pay attention to which operator makes sense to use in each layer. It can be helpful to pretend you are the computer and evaluate each expression from left to right so that each operation starts to feel a little more manageable.
+                        </p>
+                        
+                        <br><a href="#to-top">To Top</a>
+                        </td>
+                        <td class="code">
+                            <code>
+                                const spaceship = { <br>
+                                    telescope: { <br>
+                                       yearBuilt: 2018, <br>
+                                       model: '91031-XLT', <br>
+                                       focalLength: 2032  <br>
+                                    }, <br>
+                                   crew: { <br>
+                                       captain: { <br>
+                                           name: 'Sandra', <br>
+                                           degree: 'Computer Engineering', <br>
+                                           encourageTeam() { console.log('We got this!') } <br>
+                                        } <br>
+                                   }, <br>
+                                   engine: { <br>
+                                       model: 'Nimbus2000' <br>
+                                    }, <br>
+                                    nanoelectronics: { <br>
+                                        computer: { <br>
+                                           terabytes: 100,<br>
+                                           monitors: 'HD' <br>
+                                        }, <br>
+                                       'back-up': { <br>
+                                          battery: 'Lithium', <br>
+                                          terabytes: 50 <br>
+                                        } <br>
+                                   } <br>
+                               }; <br><br>
+
+                               spaceship.nanoelectronics['back-up'].battery; // Returns 'Lithium' <br>
+                            </code>
+                        
+                        </td>
+                        </tr>
             <!-- Additional row template, replace # with an appropriate ID name
 <tr id="#">
 <td class="description">
