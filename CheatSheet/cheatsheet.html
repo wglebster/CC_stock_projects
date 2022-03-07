@@ -2537,6 +2537,100 @@ grid-auto-rows: 50px; <br>
                         
                         </td>
                         </tr>
+
+                        <tr id="js-pass-by-reference">
+                            <td class="description">
+                            <h3>Pass by Reference</h3>
+                            <p>
+                                Objects are passed by reference. This means when we pass a variable assigned to an object into a function as an argument, the computer interprets the parameter name as pointing to the space in memory holding that object. As a result, functions which change object properties actually mutate the object permanently (even when the object is assigned to a const variable).                            
+                            </p>
+                            
+                            <br><a href="#to-top">To Top</a>
+                            </td>
+                            <td class="code">
+                                <code>
+                                    const spaceship = { <br>
+                                        homePlanet : 'Earth', <br>
+                                        color : 'silver' <br>
+                                      }; <br><br>
+                                       
+                                      let paintIt = obj => { <br>
+                                        obj.color = 'glorious gold' <br>
+                                      }; <br><br>
+                                       
+                                      paintIt(spaceship);<br><
+                                       
+                                      spaceship.color // Returns 'glorious gold' <br><br>
+
+                                      let spaceship = { <br>
+                                        homePlanet : 'Earth', <br>
+                                        color : 'red' <br>
+                                      }; <br>
+                                      let tryReassignment = obj => { <br>
+                                        obj = { <br>
+                                          identified : false,  <br>
+                                          'transport type' : 'flying' <br>
+                                        } <br>
+                                        console.log(obj) // Prints {'identified': false, 'transport type': 'flying'} <br>
+                                      }; <br><br>
+                                      tryReassignment(spaceship) // The attempt at reassignment does not work. <br>
+                                      spaceship // Still returns {homePlanet : 'Earth', color : 'red'}; <br><br>
+                                       
+                                      spaceship = { <br>
+                                        identified : false, <br> 
+                                        'transport type': 'flying' <br>
+                                      }; // Regular reassignment still works. <br><br>
+                                       
+                                </code>
+                            
+                            </td>
+                            </tr>
+
+                            <tr id="js-loopping-through-objects">
+                                <td class="description">
+                                <h3>Looping Through Objects</h3>
+                                <p>
+                                    Loops are programming tools that repeat a block of code until a condition is met. We learned how to iterate through arrays using their numerical indexing, but the key-value pairs in objects aren’t ordered! <br><br>
+
+                                    for...in will execute a given block of code for each property in an object. <br>
+                                </p>
+                                
+                                <br><a href="#to-top">To Top</a>
+                                </td>
+                                <td class="code">
+                                    <code>
+                                        let spaceship = { <br>
+                                            crew: { <br>
+                                              captain: { <br>
+                                                name: 'Lily', <br>
+                                                degree: 'Computer Engineering', <br>
+                                                cheerTeam() { console.log('You got this!') } <br>
+                                              }, <br>
+                                              'chief officer': { <br>
+                                                name: 'Dan',  <br>
+                                                degree: 'Aerospace Engineering', <br>
+                                                agree() { console.log('I agree, captain!') } <br>
+                                              }, <br>
+                                              medic: { <br>
+                                                name: 'Clementine', <br>
+                                                degree: 'Physics', <br>
+                                                announce() { console.log(`Jets on!`) } }, <br>
+                                              translator: { <br>
+                                                name: 'Shauna', <br>
+                                                degree: 'Conservation Science', <br>
+                                                powerFuel() { console.log('The tank is full!') } <br>
+                                              } <br>
+                                            } <br>
+                                          };  <br><br>
+                                           
+                                          // for...in <br>
+                                          for (let crewMember in spaceship.crew) { <br>
+                                            console.log(`${crewMember}: ${spaceship.crew[crewMember].name}`); <br>
+                                          } <br>
+                                    </code>
+                                
+                                </td>
+                                </tr>
             <!-- Additional row template, replace # with an appropriate ID name
 <tr id="#">
 <td class="description">
