@@ -2291,18 +2291,21 @@ grid-auto-rows: 50px; <br>
 
             <tr id="js-for-of-loop">
                 <td class="description">
-                <h3>For...Of loop</h3>
-                <p>
-                    One of the primary uses of the for...of loop is iterating through the items of an array. <br><br>
+                    <h3>For...Of loop</h3>
+                    <p>
+                        One of the primary uses of the for...of loop is iterating through the items of an array.
+                        <br><br>
 
-                    for...of has the advantage of setting up most of your loop parameters for you, but sometimes it is necessary to reclaim some control of how iteration is managed. One way of doing this is using JavaScript’s break and continue statements. <br><br>
+                        for...of has the advantage of setting up most of your loop parameters for you, but sometimes it
+                        is necessary to reclaim some control of how iteration is managed. One way of doing this is using
+                        JavaScript’s break and continue statements. <br><br>
 
-                    The break statement can be used to jump out of a loop. <br><br>
+                        The break statement can be used to jump out of a loop. <br><br>
 
-                    The continue statement is used to skip one iteration of the loop.
-                </p>
-                
-                <br><a href="#to-top">To Top</a>
+                        The continue statement is used to skip one iteration of the loop.
+                    </p>
+
+                    <br><a href="#to-top">To Top</a>
                 </td>
                 <td class="code">
                     <code>
@@ -2330,9 +2333,85 @@ grid-auto-rows: 50px; <br>
                         console.log(bird); <br>
                         } <br>
                     </code>
-                
+
                 </td>
-                </tr>
+            </tr>
+
+            <tr id="ja-objects">
+                <td class="description">
+                    <h3>Creating OBJECT Literals</h3>
+                    <p>
+                        Objects can be assigned to variables just like any JavaScript type. We use curly braces, {}, to
+                        designate an object literal. <br><br>
+                        We fill an object with unordered data. This data is organized into key-value pairs. A key is
+                        like a variable name that points to a location in memory that holds a value. <br><br>
+                        The spaceship object has two properties Fuel Type and color. 'Fuel Type' has quotation marks
+                        because it contains a space character.
+                    </p>
+
+                    <br><a href="#to-top">To Top</a>
+                </td>
+                <td class="code">
+                    <code>
+                            // An object literal with two key-value pairs <br><br>
+                                let spaceship = { <br>
+                                'Fuel Type': 'diesel', <br>
+                                color: 'silver' <br>
+                                }; <br><br>
+                        </code>
+
+                </td>
+            </tr>
+
+            <tr id="js-object-properties">
+                <td class="description">
+                    <h3>Accessing Object's Properties</h3>
+                    <p>
+                        There are two ways we can access an object’s property.
+                    <ul>
+                        <li>Dot notation: With property dot notation, we write the object’s name, followed by the dot
+                            operator and then the property name (key). If we try to access a property that does not
+                            exist on that object, undefined will be returned. </li>
+                        <li>Bracket Notation: The second way to access a key’s value is by using bracket notation, [ ].
+                            To use bracket notation to access an object’s property, we pass in the property name (key)
+                            as a string. <br><br>
+                            We must use bracket notation when accessing keys that have numbers, spaces, or special
+                            characters in them. Without bracket notation in these situations, our code would throw an
+                            error.
+                        </li>
+                    </ul> <br><br>
+                    With bracket notation you can also use a variable inside the brackets to select the keys of an
+                    object. This can be especially helpful when working with functions.
+                    </p>
+
+                    <br><a href="#to-top">To Top</a>
+                </td>
+                <td class="code">
+                    <code>
+                                let spaceship = { <br>
+                                homePlanet: 'Earth', <br>
+                                color: 'silver' <br>
+                                }; <br>
+                                spaceship.homePlanet; // Returns 'Earth' <br>
+                                spaceship.color; // Returns 'silver' <br><br>
+
+                                let spaceship = { <br>
+                                'Fuel Type': 'Turbo Fuel', <br>
+                                'Active Duty': true, <br>
+                                homePlanet: 'Earth', <br>
+                                numCrew: 5 <br>
+                                }; <br>
+                                spaceship['Active Duty'];   // Returns true <br>
+                                spaceship['Fuel Type'];   // Returns  'Turbo Fuel' <br>
+                                spaceship['numCrew'];   // Returns 5 <br>
+                                spaceship['!!!!!!!!!!!!!!!'];   // Returns undefined <br><br>
+
+                                let returnAnyProp = (objectName, propName) => objectName[propName]; <br> 
+                                returnAnyProp(spaceship, 'homePlanet'); // Returns 'Earth' <br><br>
+                            </code>
+
+                </td>
+            </tr>
             <!-- Additional row template, replace # with an appropriate ID name
 <tr id="#">
 <td class="description">
