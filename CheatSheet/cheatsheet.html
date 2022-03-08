@@ -2415,22 +2415,25 @@ grid-auto-rows: 50px; <br>
 
             <tr id="js-assign-properties">
                 <td class="description">
-                <h3>Object Property Assignment</h3>
-                <p>
-                    Objects are mutable meaning we can update them after we create them! <br>
+                    <h3>Object Property Assignment</h3>
+                    <p>
+                        Objects are mutable meaning we can update them after we create them! <br>
 
-                    We can use either dot notation, ., or bracket notation, [], and the assignment operator, = to add new key-value pairs to an object or change an existing property.  <br>
-                    One of two things can happen with property assignment:
+                        We can use either dot notation, ., or bracket notation, [], and the assignment operator, = to
+                        add new key-value pairs to an object or change an existing property. <br>
+                        One of two things can happen with property assignment:
                     <ul>
-                        <li>If the property already exists on the object, whatever value it held before will be replaced with the newly assigned value.</li>
+                        <li>If the property already exists on the object, whatever value it held before will be replaced
+                            with the newly assigned value.</li>
                         <li>If there was no property with that name, a new property will be added to the object.</li>
                     </ul>
-                    It’s important to know that although we can’t reassign an object declared with const, we can still mutate it, meaning we can add new properties and change the properties that are there.       <br><br>
+                    It’s important to know that although we can’t reassign an object declared with const, we can still
+                    mutate it, meaning we can add new properties and change the properties that are there. <br><br>
 
                     to DELETE a property, use keyword <code>delete</code>.
-                </p>
-                
-                <br><a href="#to-top">To Top</a>
+                    </p>
+
+                    <br><a href="#to-top">To Top</a>
                 </td>
                 <td class="code">
                     <code>
@@ -2447,29 +2450,36 @@ grid-auto-rows: 50px; <br>
                            
                           delete spaceship.mission;  // Removes the mission property <br>
                     </code>
-                
-                </td>
-                </tr>
 
-                <tr id="js-object-methods">
-                    <td class="description">
+                </td>
+            </tr>
+
+            <tr id="js-object-methods">
+                <td class="description">
                     <h3>Methods</h3>
                     <p>
-                        When the data stored on an object is a function we call that a method. A property is what an object has, while a method is what an object does. <br><br>
+                        When the data stored on an object is a function we call that a method. A property is what an
+                        object has, while a method is what an object does. <br><br>
 
-                        Do object methods seem familiar? That’s because you’ve been using them all along! For example console is a global javascript object and .log() is a method on that object. Math is also a global javascript object and .floor() is a method on it. <br><br>
+                        Do object methods seem familiar? That’s because you’ve been using them all along! For example
+                        console is a global javascript object and .log() is a method on that object. Math is also a
+                        global javascript object and .floor() is a method on it. <br><br>
 
-                        We can include methods in our object literals by creating ordinary, comma-separated key-value pairs. The key serves as our method’s name, while the value is an anonymous function expression. <br><br>
-                        
-                        With the new method syntax introduced in ES6 we can omit the colon and the function keyword. <br><br>
+                        We can include methods in our object literals by creating ordinary, comma-separated key-value
+                        pairs. The key serves as our method’s name, while the value is an anonymous function expression.
+                        <br><br>
 
-                        Object methods are invoked by appending the object’s name with the dot operator followed by the method name and parentheses.
+                        With the new method syntax introduced in ES6 we can omit the colon and the function keyword.
+                        <br><br>
+
+                        Object methods are invoked by appending the object’s name with the dot operator followed by the
+                        method name and parentheses.
                     </p>
-                    
+
                     <br><a href="#to-top">To Top</a>
-                    </td>
-                    <td class="code">
-                        <code>
+                </td>
+                <td class="code">
+                    <code>
                             const alienShip = { <br>
                                 invade: function () { <br> 
                                   console.log('Hello! We have come to dominate your planet. Instead of Earth, it shall be called New Xaculon.') <br>
@@ -2485,25 +2495,33 @@ grid-auto-rows: 50px; <br>
                               alienShip.invade(); // Prints 'Hello! We have come to dominate your planet. Instead of Earth, it shall be called New Xaculon.'
                             
                         </code>
-                    
-                    </td>
-                    </tr>
 
-                    <tr id="js-nested-objects">
-                        <td class="description">
-                        <h3>Nested Objects</h3>
-                        <p>
-                            In application code, objects are often nested— an object might have another object as a property which in turn could have a property that’s an array of even more objects!
+                </td>
+            </tr>
 
-                            In our spaceship object, we want a crew object. This will contain all the crew members who do important work on the craft. Each of those crew members are objects themselves. They have properties like name, and degree, and they each have unique methods based on their roles. We can also nest other objects in the spaceship such as a telescope or nest details about the spaceship’s computers inside a parent nanoelectronics object.  <br><br>
-                            
-                            We can chain operators to access nested properties. We’ll have to pay attention to which operator makes sense to use in each layer. It can be helpful to pretend you are the computer and evaluate each expression from left to right so that each operation starts to feel a little more manageable.
-                        </p>
-                        
-                        <br><a href="#to-top">To Top</a>
-                        </td>
-                        <td class="code">
-                            <code>
+            <tr id="js-nested-objects">
+                <td class="description">
+                    <h3>Nested Objects</h3>
+                    <p>
+                        In application code, objects are often nested— an object might have another object as a property
+                        which in turn could have a property that’s an array of even more objects!
+
+                        In our spaceship object, we want a crew object. This will contain all the crew members who do
+                        important work on the craft. Each of those crew members are objects themselves. They have
+                        properties like name, and degree, and they each have unique methods based on their roles. We can
+                        also nest other objects in the spaceship such as a telescope or nest details about the
+                        spaceship’s computers inside a parent nanoelectronics object. <br><br>
+
+                        We can chain operators to access nested properties. We’ll have to pay attention to which
+                        operator makes sense to use in each layer. It can be helpful to pretend you are the computer and
+                        evaluate each expression from left to right so that each operation starts to feel a little more
+                        manageable.
+                    </p>
+
+                    <br><a href="#to-top">To Top</a>
+                </td>
+                <td class="code">
+                    <code>
                                 const spaceship = { <br>
                                     telescope: { <br>
                                        yearBuilt: 2018, <br>
@@ -2534,21 +2552,24 @@ grid-auto-rows: 50px; <br>
 
                                spaceship.nanoelectronics['back-up'].battery; // Returns 'Lithium' <br>
                             </code>
-                        
-                        </td>
-                        </tr>
 
-                        <tr id="js-pass-by-reference">
-                            <td class="description">
-                            <h3>Pass by Reference</h3>
-                            <p>
-                                Objects are passed by reference. This means when we pass a variable assigned to an object into a function as an argument, the computer interprets the parameter name as pointing to the space in memory holding that object. As a result, functions which change object properties actually mutate the object permanently (even when the object is assigned to a const variable).                            
-                            </p>
-                            
-                            <br><a href="#to-top">To Top</a>
-                            </td>
-                            <td class="code">
-                                <code>
+                </td>
+            </tr>
+
+            <tr id="js-pass-by-reference">
+                <td class="description">
+                    <h3>Pass by Reference</h3>
+                    <p>
+                        Objects are passed by reference. This means when we pass a variable assigned to an object into a
+                        function as an argument, the computer interprets the parameter name as pointing to the space in
+                        memory holding that object. As a result, functions which change object properties actually
+                        mutate the object permanently (even when the object is assigned to a const variable).
+                    </p>
+
+                    <br><a href="#to-top">To Top</a>
+                </td>
+                <td class="code">
+                    <code>
                                     const spaceship = { <br>
                                         homePlanet : 'Earth', <br>
                                         color : 'silver' <br>
@@ -2582,23 +2603,25 @@ grid-auto-rows: 50px; <br>
                                       }; // Regular reassignment still works. <br><br>
                                        
                                 </code>
-                            
-                            </td>
-                            </tr>
 
-                            <tr id="js-loopping-through-objects">
-                                <td class="description">
-                                <h3>Looping Through Objects</h3>
-                                <p>
-                                    Loops are programming tools that repeat a block of code until a condition is met. We learned how to iterate through arrays using their numerical indexing, but the key-value pairs in objects aren’t ordered! <br><br>
+                </td>
+            </tr>
 
-                                    for...in will execute a given block of code for each property in an object. <br>
-                                </p>
-                                
-                                <br><a href="#to-top">To Top</a>
-                                </td>
-                                <td class="code">
-                                    <code>
+            <tr id="js-loopping-through-objects">
+                <td class="description">
+                    <h3>Looping Through Objects</h3>
+                    <p>
+                        Loops are programming tools that repeat a block of code until a condition is met. We learned how
+                        to iterate through arrays using their numerical indexing, but the key-value pairs in objects
+                        aren’t ordered! <br><br>
+
+                        for...in will execute a given block of code for each property in an object. <br>
+                    </p>
+
+                    <br><a href="#to-top">To Top</a>
+                </td>
+                <td class="code">
+                    <code>
                                         let spaceship = { <br>
                                             crew: { <br>
                                               captain: { <br>
@@ -2628,9 +2651,272 @@ grid-auto-rows: 50px; <br>
                                             console.log(`${crewMember}: ${spaceship.crew[crewMember].name}`); <br>
                                           } <br>
                                     </code>
+                </td>
+            </tr>
+
+            <tr id="js-this-keyword">
+                <td class="description">
+                <h3>THIS keyword</h3>
+                <p>
+                    Objects are collections of related data and functionality. We store that functionality in methods on our objects. <br><br>
+                    
+                    The this keyword references the calling object which provides access to the calling object’s properties. In the example above, the calling object is goat and by using this we’re accessing the goat object itself, and then the dietType property of goat by using property dot notation.
+                </p>
+                
+                <br><a href="#to-top">To Top</a>
+                </td>
+                <td class="code">
+                    <code>
+                        const goat = { <br>
+                            dietType: 'herbivore', <br>
+                            makeSound() { <br>
+                              console.log('baaa'); <br>
+                            }, <br>
+                            diet() { <br>
+                              console.log(dietType); <br>
+                            } <br>
+                          }; <br>
+                          goat.diet(); <br> 
+                          // Output will be "ReferenceError: dietType is not defined" <br><br>
+
+                          const goat = { <br>
+                            dietType: 'herbivore', <br>
+                            makeSound() { <br>
+                              console.log('baaa'); <br>
+                            }, <br>
+                            diet() { <br>
+                              console.log(this.dietType); <br>
+                            } <br>
+                          }; <br>
+                           
+                          goat.diet(); <br>
+                          // Output: herbivore <br><br>
+                        
+                    </code>
+                
+                </td>
+                </tr>
+
+                <tr id="js-privacy">
+                    <td class="description">
+                    <h3>Privacy</h3>
+                    <p>
+                        Accessing and updating properties is fundamental in working with objects. However, there are cases in which we don’t want other code simply accessing and updating an object’s properties. When discussing privacy in objects, we define it as the idea that only certain properties should be mutable or able to change in value. <br><br>
+
+                        Certain languages have privacy built-in for objects, but JavaScript does not have this feature. Rather, JavaScript developers follow naming conventions that signal to other developers how to interact with a property. One common convention is to place an underscore _ before the name of a property to mean that the property should not be altered.                   
+                    </p>
+                    
+                    <br><a href="#to-top">To Top</a>
+                    </td>
+                    <td class="code">
+                        <code>
+                            const bankAccount = { <br>
+                                _amount: 1000 <br>
+                              } <br>
+                            
+                        </code>
+                    
+                    </td>
+                    </tr>
+
+                    <tr id="js-getters">
+                        <td class="description">
+                        <h3>Getters</h3>
+                        <p>
+                            Getters are methods that get and return the internal properties of an object. But they can do more than just retrieve the value of a property!
+                            <ul>
+                                <li>We use the get keyword followed by a function.</li>
+                                <li>We use an if...else conditional to check if both _firstName and _lastName exist (by making sure they both return truthy values) and then return a different value depending on the result.</li>
+                                <li>We can access the calling object’s internal properties using this. In fullName, we’re accessing both this._firstName and this._lastName.</li>
+                                <li>n the last line we call fullName on person. In general, getter methods do not need to be called with a set of parentheses. Syntactically, it looks like we’re accessing a property.</li>
+                            </ul>
+
+                            <ul>
+                                   <li>Getters can perform an action on the data when getting a property.</li>
+                                   <li>Getters can return different values using conditionals.</li>
+                                   <li>In a getter, we can access the properties of the calling object using this.</li>
+                                   <li>The functionality of our code is easier for other developers to understand.</li>
+                            </ul>
+
+                                Another thing to keep in mind when using getter (and setter) methods is that properties cannot share the same name as the getter/setter function. If we do so, then calling the method will result in an infinite call stack error. One workaround is to add an underscore before the property name like we did in the example above.
+                            </ul>                        
+                        </p>
+                        
+                        <br><a href="#to-top">To Top</a>
+                        </td>
+                        <td class="code">
+                            <code>
+                                const person = { <br>
+                                    _firstName: 'John', <br>
+                                    _lastName: 'Doe', <br>
+                                    get fullName() { <br>
+                                      if (this._firstName && this._lastName){ <br>
+                                        return `${this._firstName} ${this._lastName}`; <br>
+                                      } else { <br>
+                                        return 'Missing a first name or a last name.'; <br>
+                                      } <br>
+                                    } <br>
+                                  } <br><br>
+                                   
+                                  // To call the getter method: <br>
+                                  person.fullName; // 'John Doe' <br>
+                            </code>
+                        
+                        </td>
+                        </tr>
+
+                        <tr id="js-setters">
+                            <td class="description">
+                            <h3>Setters</h3>
+                            <p>
+                                Along with getter methods, we can also create setter methods which reassign values of existing properties within an object.
+                                
+                                <ul>
+                                    <li>We can perform a check for what value is being assigned </li>
+                                    <li>When we use the setter method, only values that are numbers will reassign this._age</li>
+                                    <li>There are different outputs depending on what values are used to reassign this._age.</li>
+                                </ul>
+
+                                Setter methods do not need to be called with a set of parentheses. Syntactically, it looks like we’re reassigning the value of a property. <br><br>
+
+                                Like getter methods, there are similar advantages to using setter methods that include checking input, performing actions on properties, and displaying a clear intention for how the object is supposed to be used. Nonetheless, even with a setter method, it is still possible to directly reassign properties. 
+                            </p>
+                            
+                            <br><a href="#to-top">To Top</a>
+                            </td>
+                            <td class="code">
+                                <code>
+                                    const person = { <br>
+                                        _age: 37, <br>
+                                        set age(newAge){ <br>
+                                          if (typeof newAge === 'number'){ <br>
+                                            this._age = newAge; <br>
+                                          } else { <br>
+                                            console.log('You must assign a number to age'); <br>
+                                          } <br>
+                                        } <br>
+                                      }; <br><br>
+
+                                        person.age = 40; <br>
+                                        console.log(person._age); // Logs: 40 <br>
+                                        person.age = '40'; // Logs: You must assign a number to age <br><br>
+                                </code>
+                            
+                            </td>
+                            </tr>
+
+                            <tr id="js-factory-functions">
+                                <td class="description">
+                                <h3>Factory Functions</h3>
+                                <p>
+                                    There are times where we want to create many instances of an object quickly. Here’s where factory functions come in. A real world factory manufactures multiple copies of an item quickly and on a massive scale. A factory function is a function that returns an object and can be reused to make multiple object instances. Factory functions can also have parameters allowing us to customize the object that gets returned.                                
+                                </p>
+                                
+                                <br><a href="#to-top">To Top</a>
+                                </td>
+                                <td class="code">
+                                    <code>
+                                        const monsterFactory = (name, age, energySource, catchPhrase) => { <br>
+                                            return { <br>
+                                              name: name, <br>
+                                              age: age, <br>
+                                              energySource: energySource, <br>
+                                              scare() { <br>
+                                                console.log(catchPhrase); <br>
+                                              }  <br>
+                                            } <br>
+                                          };      <br><br>
+                                          
+                                          const ghost = monsterFactory('Ghouly', 251, 'ectoplasm', 'BOO!'); <br>
+                                          ghost.scare(); // 'BOO!' <br><br>
+                                    </code>
                                 
                                 </td>
                                 </tr>
+
+                                <tr id="js-property-value-shorthand">
+                                    <td class="description">
+                                    <h3>Property Value Shorthand</h3>
+                                    <p>
+                                        ES6 introduced some new shortcuts for assigning properties to variables known as destructuring.
+                                        <br><br>
+                                        We can use a destructuring technique, called property value shorthand, to save ourselves some keystrokes.                                    
+                                    </p>
+                                    
+                                    <br><a href="#to-top">To Top</a>
+                                    </td>
+                                    <td class="code">
+                                        <code>
+                                            const monsterFactory = (name, age) => { <br>
+                                                return {  <br>
+                                                  name, <br>
+                                                  age  <br>
+                                                } <br>
+                                              }; <br>
+                                        </code>
+                                    
+                                    </td>
+                                    </tr>
+
+                                    <tr id="js-destructured-assignment">
+                                        <td class="description">
+                                        <h3>Destructured Assignment</h3>
+                                        <p>
+                                            We often want to extract key-value pairs from objects and save them as variables. <br><br>
+                                            
+                                            In destructured assignment we create a variable with the name of an object’s key that is wrapped in curly braces { } and assign to it the object.
+                                        </p>
+                                        
+                                        <br><a href="#to-top">To Top</a>
+                                        </td>
+                                        <td class="code">
+                                            <code>
+                                                const vampire = { <br>
+                                                    name: 'Dracula', <br>
+                                                    residence: 'Transylvania', <br>
+                                                    preferences: { <br>
+                                                      day: 'stay inside', <br>
+                                                      night: 'satisfy appetite' <br>
+                                                    } <br>
+                                                  };       <br><br>
+                                                  
+                                                  const residence = vampire.residence;  <br>
+                                                  console.log(residence); // Prints 'Transylvania' <br><br>
+                                                  
+                                                  const { residence } = vampire; <br>
+                                                  console.log(residence); // Prints 'Transylvania' <br><br>
+
+                                                  const { day } = vampire.preferences; <br>
+                                                  console.log(day); // Prints 'stay inside' <br><br>
+                                            </code>
+                                        
+                                        </td>
+                                        </tr>
+
+                                        <tr id="js-built-in-object-methods">
+                                            <td class="description" colspan="2">
+                                            <h3>Built-in Object Methods</h3>
+                                            <p>
+                                                n the previous exercises we’ve been creating instances of objects that have their own methods. But, we can also take advantage of built-in methods for Objects!<br>
+
+                                                For example, we have access to object instance methods like: .hasOwnProperty(), .valueOf(), and many more.<br>
+
+                                                There are also useful Object class methods such as Object.assign(), Object.entries(), and Object.keys()<br>
+                                                
+
+                                            </p>
+                                            
+                                            <br><a href="#to-top">To Top</a>
+                                            </td>
+                                            <td class="code">
+                                                <code>
+                                                    
+                                                </code>
+                                            
+                                            </td>
+                                            </tr>
+
+
             <!-- Additional row template, replace # with an appropriate ID name
 <tr id="#">
 <td class="description">
