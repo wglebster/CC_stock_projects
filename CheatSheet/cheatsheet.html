@@ -123,8 +123,10 @@
             <li><a href="#js-property-value-shorthand">Property Value Shorthand</a></li>
             <li><a href="#js-destructured-assignment">Destructured Assignment</a></li>
             <li><a href="#js-built-in-object-methods">Built-in Object Methods</a></li>
+            <li><a href="#js-example-object">An example Object</a></li>
+            <li><a href="#js-abstraction">Abstraction</a></li> 
 
-
+            
         </ul>
 
         <!-- add new menu item
@@ -2918,7 +2920,9 @@ grid-auto-rows: 50px; <br>
 
                                                 For example, we have access to object instance methods like: .hasOwnProperty(), .valueOf(), and many more.<br>
 
-                                                There are also useful Object class methods such as Object.assign(), Object.entries(), and Object.keys()<br>
+                                                There are also useful Object class methods such as Object.assign(), Object.entries(), and Object.keys()<br><br>
+
+                                                <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">MDN reference to Objects</a>
 
 
                                             </p>
@@ -2931,7 +2935,109 @@ grid-auto-rows: 50px; <br>
                                                 </code>
                                             
                                             </td>
+                                        </tr>
+ 
+                                        <tr id="js-example-object">
+                                            
+                                            <td class="code" colspan="2">
+                                                <h3>Example Object</h3> <br><br>
+                                                <code>
+                                                    const menu = {  <br>
+                                                        _courses: { <br>
+                                                          appetizers: [], <br>
+                                                          mains: [], <br>
+                                                          desserts: [], <br>
+                                                        }, <br>
+                                                          //getters <br>
+                                                          get appetizers() { <br>
+                                                            return this._courses.appetizers; <br>
+                                                          }, <br>
+                                                          get mains() { <br>
+                                                            return this._courses.mains; <br>
+                                                          }, <br>
+                                                          get desserts() { <br>
+                                                            return this._courses.desserts; <br>
+                                                          }, <br>
+                                                          set appetizers(appetizersIn){  <br>
+                                                            this._courses.appetizers = appetizersIn; <br>
+                                                          }, <br>
+                                                          //setters <br>
+                                                          set mains(mainsIn){ <br>
+                                                            this._courses.mains = mainsIn; <br>
+                                                          }, <br>
+                                                          set desserts(dessertsIn){ <br>
+                                                            this._courses.desserts = dessertsIn; <br>
+                                                          }, <br>
+                                                        get courses() { <br>
+                                                          return { <br>
+                                                            appetizers: this.appetizers, <br>
+                                                            mains: this.mains, <br>
+                                                            desserts: this.desserts, <br>
+                                                          }; <br>
+                                                        }, <br>
+                                                        addDishToCourse(courseName, dishName, dishPrice){ <br>
+                                                          const dish = { <br>
+                                                            name: dishName, <br>
+                                                            price: dishPrice, <br>
+                                                          }; <br>
+                                                          this._courses[courseName].push(dish);  <br>
+                                                        }, <br>
+                                                        getRandomDishFromCourse(courseName) { <br>
+                                                          const dishes = this._courses[courseName]; <br>
+                                                          const index = Math.floor(Math.random() * dishes.length); <br>
+                                                          return dishes[index]; <br>
+                                                        }, <br>
+                                                        generateRandomMeal() { <br>
+                                                          const appetizer = this.getRandomDishFromCourse('appetizers'); <br>
+                                                          const main = this.getRandomDishFromCourse('mains'); <br>
+                                                          const dessert = this.getRandomDishFromCourse('desserts'); <br>
+                                                          const totalPrice = appetizer.price + main.price + dessert.price; <br>
+                                                          return `Your total bill for ${appetizer.name}, ${main.name} and ${dessert.name} is \$${totalPrice}.` <br>
+                                                        } <br>
+                                                      }; <br><br>
+
+                                                      //try it out <br><br>
+
+                                                        menu.addDishToCourse('appetizers', 'salad', 4.00); <br>
+                                                        menu.addDishToCourse('appetizers', 'wings', 6.00); <br>
+                                                        menu.addDishToCourse('appetizers', 'fries', 5.00); <br><br>
+
+                                                        menu.addDishToCourse('mains', 'steak', 10.00); <br>
+                                                        menu.addDishToCourse('mains', 'salmon', 15.00); <br>
+                                                        menu.addDishToCourse('mains', 'tofu', 9.00); <br><br>
+
+                                                        menu.addDishToCourse('desserts', 'ice cream', 2.50); <br>
+                                                        menu.addDishToCourse('desserts', 'coffee', 1.50); <br>
+                                                        menu.addDishToCourse('desserts', 'cake', 3.00); <br><br>
+
+                                                        const meal = menu.generateRandomMeal(); <br>
+                                                        console.log(meal);<br><br>
+                                                </code>
+                                            
+                                                <a href="#to-top">To Top</a>
+                                            </td>
                                             </tr>
+
+                                            <tr id="js-abstraction">
+                                                <td class="description" colspan="2">
+                                                <h3>Abstraction / Higher order Functions</h3>
+                                                <p>
+                                                    In programming, we can accomplish “abstraction” by writing functions. In addition to allowing us to reuse our code, functions help to make clear, readable programs. If you encountered countToThree() in a program, you might be able to quickly guess what the function did without having to stop and read the function’s body. <br><br>
+                                                    
+                                                    another way to add a level of abstraction to our programming: higher-order functions. Higher-order functions are functions that accept other functions as arguments and/or return functions as output. This enables us to build abstractions on other abstractions, just like “We hosted a birthday party” is an abstraction that may build on the abstraction “We made a cake.” <br><br>
+
+                                                    In summary, using more abstraction in our code allows us to write more modular code which is easier to read and debug. <br><br>
+                                                </p>
+                                                
+                                                <br><a href="#to-top">To Top</a>
+                                                </td>
+                                                <td class="code">
+                                                    <code>
+                                                        
+                                                    </code>
+                                                
+                                                </td>
+                                                </tr>
 
 
             <!-- Additional row template, replace # with an appropriate ID name
