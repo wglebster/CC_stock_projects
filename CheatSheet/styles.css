@@ -21,11 +21,14 @@ caption {
 .sidenav{
     align-self: flex-start;
     position: sticky;
-    top: 6.7rem;
+    top: 0;
     display: inline-block;
     width: 150rem;
     border: #9ea3a0 0.5px solid;
     background-color: #333330;
+    overflow: auto;
+    max-height: 100vh;
+    
 }
 .sidenav h3{
     margin: 0.1rem;

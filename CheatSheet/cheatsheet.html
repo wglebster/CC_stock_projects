@@ -127,7 +127,7 @@
             <li><a href="#js-abstraction">Abstraction</a></li>
             <li><a href="#js-functions-as-data"></a></li>
             <li><a href="#s-functions-as-parameters"></a></li>
-            <li><a href="#js-for-each">.forEach()</a></li> 
+            <li><a href="#js-for-each">.forEach()</a></li>
             <li><a href="#js-map">.map()</a></li>
             <li><a href="#js-filter">.filter()</a></li>
             <li><a href="#js-findindex">.findIndex()</a></li>
@@ -3395,75 +3395,104 @@ grid-auto-rows: 50px; <br>
 
                 </td>
             </tr>
-            <tr id="#js-interactivity-intro" >
+            <tr id="#js-interactivity-intro">
                 <td class="description" colspan="2">
-                <h3>Making websites interactive with JavaScript</h3>
-                <p>
-                    The <code>script</code> element allows you to add JavaScript code inside an HTML file. <br><br>
-                    Linking code is preferable because of a programming concept called Separation of Concerns (SoC). Instead of having messy code that is all in the same file, web developers separate their code into different files, making each “concern” easier to understand and more convenient when changes must be made. <br>
-                    To link a .js file to an html file use <code>src</code> attribute inside the script tag: "script src="./exampleScript.js" /script" <br><br>
-                    <strong> The script tag must be very last element inside the body tag.</strong> Also, scripts are loaded sequentially, so if one script depends on another script, they should be placed in that very order inside the HTML file. <br><br>
+                    <h3>Making websites interactive with JavaScript</h3>
+                    <p>
+                        The <code>script</code> element allows you to add JavaScript code inside an HTML file. <br><br>
+                        Linking code is preferable because of a programming concept called Separation of Concerns (SoC).
+                        Instead of having messy code that is all in the same file, web developers separate their code
+                        into different files, making each “concern” easier to understand and more convenient when
+                        changes must be made. <br>
+                        To link a .js file to an html file use <code>src</code> attribute inside the script tag: "script
+                        src="./exampleScript.js" /script" <br><br>
+                        <strong> The script tag must be very last element inside the body tag.</strong> Also, scripts
+                        are loaded sequentially, so if one script depends on another script, they should be placed in
+                        that very order inside the HTML file. <br><br>
 
-                    <h2> The defer attribute</h2> specifies scripts should be executed after the HTML file is completely parsed. When the HTML parser encounters a script element with the defer attribute, it loads the script but defers the actual execution of the JavaScript until after it finishes parsing the rest of the elements in the HTML file. <br>
-                    When a script contains functionality that requires interaction with the DOM, the defer attribute is the way to go. This way, it ensures that the entire HTML file has been parsed before the script is executed. <br><br>
+                    <h2> The defer attribute</h2> specifies scripts should be executed after the HTML file is completely
+                    parsed. When the HTML parser encounters a script element with the defer attribute, it loads the
+                    script but defers the actual execution of the JavaScript until after it finishes parsing the rest of
+                    the elements in the HTML file. <br>
+                    When a script contains functionality that requires interaction with the DOM, the defer attribute is
+                    the way to go. This way, it ensures that the entire HTML file has been parsed before the script is
+                    executed. <br><br>
 
-                    <h2> The async attribute</h2> loads and executes the script asynchronously with the rest of the webpage. This means that, similar to the defer attribute, the HTML parser will continue parsing the rest of the HTML as the script is downloaded in the background. However, with the async attribute, the script will not wait until the entire page is parsed: it will execute immediately after it has been downloaded. <br>
-                    async is useful for scripts that are independent of other scripts in order to function accordingly. Thus, if it does not matter exactly at which point the script file is executed, asynchronous loading is the most suitable option as it optimizes web page load time.
-                </p>
-                
-                <br><a href="#to-top">To Top</a>
+                    <h2> The async attribute</h2> loads and executes the script asynchronously with the rest of the
+                    webpage. This means that, similar to the defer attribute, the HTML parser will continue parsing the
+                    rest of the HTML as the script is downloaded in the background. However, with the async attribute,
+                    the script will not wait until the entire page is parsed: it will execute immediately after it has
+                    been downloaded. <br>
+                    async is useful for scripts that are independent of other scripts in order to function accordingly.
+                    Thus, if it does not matter exactly at which point the script file is executed, asynchronous loading
+                    is the most suitable option as it optimizes web page load time.
+                    </p>
+
+                    <br><a href="#to-top">To Top</a>
                 </td>
                 <td class="code">
                     <code>
-                        
-                    </code>
-                
-                </td>
-                </tr>
 
-                <tr id="#innerHTML">
-                    <td class="description">
+                    </code>
+
+                </td>
+            </tr>
+
+            <tr id="#innerHTML">
+                <td class="description">
                     <h3>Tweaking elements (innerHTML)</h3>
                     <p>
-                        When using the DOM in your script to access an HTML element, whether it’s an li element or the entire body element, you also have access to all of that element’s properties. <br>
+                        When using the DOM in your script to access an HTML element, whether it’s an li element or the
+                        entire body element, you also have access to all of that element’s properties. <br>
 
-                            This includes the ability to modify the contents of the element as well as its attributes and properties, which can range from modifying the text inside a p element to assigning a new background color to a div. For example, the .innerHTML property allows you to access and set the contents of an element. <br>
-                    
+                        This includes the ability to modify the contents of the element as well as its attributes and
+                        properties, which can range from modifying the text inside a p element to assigning a new
+                        background color to a div. For example, the .innerHTML property allows you to access and set the
+                        contents of an element. <br>
+
                     </p>
-                    
+
                     <br><a href="#to-top">To Top</a>
-                    </td>
-                    <td class="code">
-                        <code>
+                </td>
+                <td class="code">
+                    <code>
                             document.body.innerHTML = 'The cat loves the dog.'; <br><br>
                             document.body.innerHTML = 'h2>This is a heading /h2>'; <br><br>
                         </code>
-                    
-                    </td>
-                    </tr>
 
-                    <tr id="#select-and-modify-elements">
-                        <td class="description">
-                        <h3>Select and modify elements </h3>
-                        <p>
-                            What if we wanted to select a specific element besides the entire body element? The DOM interface allows us to access a specific element with CSS selectors. 
+                </td>
+            </tr>
 
-                                CSS selectors define the elements to which a set of CSS rules apply, but we can also use these same selectors to access DOM elements with JavaScript! Selectors can include a tag name, a class, or an ID.
-                                
-                                The <code>.querySelector()</code>  method allows us to specify a CSS selector as a string and returns the first element that matches that selector. <br><br>
+            <tr id="#select-and-modify-elements">
+                <td class="description">
+                    <h3>Select and modify elements </h3>
+                    <p>
+                        What if we wanted to select a specific element besides the entire body element? The DOM
+                        interface allows us to access a specific element with CSS selectors.
+
+                        CSS selectors define the elements to which a set of CSS rules apply, but we can also use these
+                        same selectors to access DOM elements with JavaScript! Selectors can include a tag name, a
+                        class, or an ID.
+
+                        The <code>.querySelector()</code> method allows us to specify a CSS selector as a string and
+                        returns the first element that matches that selector. <br><br>
 
 
-                                Along with .querySelector(), JavaScript has more targeted methods that select elements based on their class, id, or tag name.
+                        Along with .querySelector(), JavaScript has more targeted methods that select elements based on
+                        their class, id, or tag name.
 
-                                For example, if you want to access an element directly by its id, you can use the aptly named .getElementById() method.  <br><br>
+                        For example, if you want to access an element directly by its id, you can use the aptly named
+                        .getElementById() method. <br><br>
 
-                                There are also the <code>.getElementsByClassName() and .getElementsByTagName() </code> methods which return an array of elements, instead of just one element. You can use bracket notation to access individual elements of an array.
-                        </p>
-                        
-                        <br><a href="#to-top">To Top</a>
-                        </td>
-                        <td class="code">
-                            <code>
+                        There are also the <code>.getElementsByClassName() and .getElementsByTagName() </code> methods
+                        which return an array of elements, instead of just one element. You can use bracket notation to
+                        access individual elements of an array.
+                    </p>
+
+                    <br><a href="#to-top">To Top</a>
+                </td>
+                <td class="code">
+                    <code>
                                 document.querySelector('p'); //this code would return the first paragraph in the document. <br><br>
                                 document.getElementById('bio').innerHTML = 'The description'; // we selected the element with an ID of 'bio' and set its .innerHTML to the text 'The description'
                                 <br><br>
@@ -3473,51 +3502,59 @@ grid-auto-rows: 50px; <br>
                                 document.getElementsByTagName('li')[1].innerHTML = 'Cedric Diggory`;
 
                             </code>
-                        
-                        </td>
-                        </tr>
 
-                        <tr id="#style-an-element">
-                            <td class="description">
-                            <h3>Style an element</h3>
-                            <p>
-                                Another way to modify an element is by changing its CSS style. The .style property of a DOM element provides access to the inline style of that HTML tag.
+                </td>
+            </tr>
 
-                                The syntax follows an element.style.property format, with the property representing a CSS property.
+            <tr id="#style-an-element">
+                <td class="description">
+                    <h3>Style an element</h3>
+                    <p>
+                        Another way to modify an element is by changing its CSS style. The .style property of a DOM
+                        element provides access to the inline style of that HTML tag.
+
+                        The syntax follows an element.style.property format, with the property representing a CSS
+                        property.
 
 
 
-                            </p>
-                            
-                            <br><a href="#to-top">To Top</a>
-                            </td>
-                            <td class="code">
-                                <code>
+                    </p>
+
+                    <br><a href="#to-top">To Top</a>
+                </td>
+                <td class="code">
+                    <code>
                                     let blueElement = document.querySelector('.blue'); <br><br>
                                     blueElement.style.backgroundColor = 'blue'; <br><br>
                                     document.querySelector('.blue').style.fontFamily = 'Roboto';                    
                                 </code>
-                            
-                            </td>
-                            </tr>
 
-                            <tr id="#traversing-the-DOM">
-                                <td class="description">
-                                <h3>Traversing the DOM</h3>
-                                <p>
-                                    A parent node is any node that is a direct ancestor of another node. A child node is a direct descendant of another node, called the parent node.
+                </td>
+            </tr>
 
-                                    These relationships follow the nested structure of the HTML code. Elements nested within one HTML element are children of that parent element.
+            <tr id="#traversing-the-DOM">
+                <td class="description">
+                    <h3>Traversing the DOM</h3>
+                    <p>
+                        A parent node is any node that is a direct ancestor of another node. A child node is a direct
+                        descendant of another node, called the parent node.
 
-                                    Each element has a .parentNode and .children property. The .parentNode property returns the parent of the specified element in the DOM hierarchy. Note that the document element is the root node so its .parentNode property will return null. The .children property returns an array of the specified element’s children. If the element does not have any children, it will return null.
+                        These relationships follow the nested structure of the HTML code. Elements nested within one
+                        HTML element are children of that parent element.
+
+                        Each element has a .parentNode and .children property. The .parentNode property returns the
+                        parent of the specified element in the DOM hierarchy. Note that the document element is the root
+                        node so its .parentNode property will return null. The .children property returns an array of
+                        the specified element’s children. If the element does not have any children, it will return
+                        null.
 
 
-                                </p>
-                                
-                                <br><a href="#to-top">To Top</a>
-                                </td>
-                                <td class="code">
-                                    <code>
+                    </p>
+
+                    <br><a href="#to-top">To Top</a>
+                </td>
+                <td class="code">
+                    <code>
                                         ul id='groceries'> <br>
                                         li id='must-have'>Toilet Paper /li <br>
                                         li Apples /li <br>
@@ -3527,74 +3564,89 @@ grid-auto-rows: 50px; <br>
                                         let parentElement = document.getElementById('must-have').parentNode; // returns ul element <br>
                                         let childElements = document.getElementById('groceries').children; // returns an array of li elements  <br>
                                     </code>
-                                
-                                </td>
-                                </tr>
 
-                                <tr id="#create-and-insert-elements">
-                                    <td class="description">
-                                    <h3>Create and insert elements</h3>
-                                    <p>
-                                        Just as the DOM allows scripts to modify existing elements, it also allows for the creation of new ones.
+                </td>
+            </tr>
 
-                                        The .createElement() method creates a new element based on the specified tag name passed into it as an argument. However, it does not append it to the document. It creates an empty element with no inner HTML. <br>
-                                        We can assign values to the properties of the newly created element like how we’ve done previously with existing elements. <br>
+            <tr id="#create-and-insert-elements">
+                <td class="description">
+                    <h3>Create and insert elements</h3>
+                    <p>
+                        Just as the DOM allows scripts to modify existing elements, it also allows for the creation of
+                        new ones.
 
-                                        In order to create an element and add it to the web page, you must assign it to be the child of an element that already exists on the DOM, referred to as the parent element. We call this process appending. The .appendChild() method will add a child element as the parent element’s last child node. <br>
-                                        The .appendChild() method does not replace the content inside of the parent, in this case, body. Rather, it appends the new element as the last child of that parent.
-                                    </p>
-                                    
-                                    <br><a href="#to-top">To Top</a>
-                                    </td>
-                                    <td class="code">
-                                        <code>
+                        The .createElement() method creates a new element based on the specified tag name passed into it
+                        as an argument. However, it does not append it to the document. It creates an empty element with
+                        no inner HTML. <br>
+                        We can assign values to the properties of the newly created element like how we’ve done
+                        previously with existing elements. <br>
+
+                        In order to create an element and add it to the web page, you must assign it to be the child of
+                        an element that already exists on the DOM, referred to as the parent element. We call this
+                        process appending. The .appendChild() method will add a child element as the parent element’s
+                        last child node. <br>
+                        The .appendChild() method does not replace the content inside of the parent, in this case, body.
+                        Rather, it appends the new element as the last child of that parent.
+                    </p>
+
+                    <br><a href="#to-top">To Top</a>
+                </td>
+                <td class="code">
+                    <code>
                                             let paragraph = document.createElement('p'); <br>
                                             paragraph.id = 'info';<br>
                                             paragraph.innerHTML = 'The text inside the paragraph'; <br>
                                             document.body.appendChild(paragraph);
                                         </code>
-                                    
-                                    </td>
-                                    </tr>
 
-                                    <tr id="#remove-an-element">
-                                        <td class="description">
-                                        <h3>Remove an element</h3>
-                                        <p>
-                                            In addition to modifying or creating an element from scratch, the DOM also allows for the removal of an element. The .removeChild() method removes a specified child from a parent. <br><br>
+                </td>
+            </tr>
 
-                                            If you want to hide an element rather than completely deleting it, the .hidden property allows you to hide it by setting the property as true or false
-                                            
-                                        </p>
-                                        
-                                        <br><a href="#to-top">To Top</a>
-                                        </td>
-                                        <td class="code">
-                                            <code>
+            <tr id="#remove-an-element">
+                <td class="description">
+                    <h3>Remove an element</h3>
+                    <p>
+                        In addition to modifying or creating an element from scratch, the DOM also allows for the
+                        removal of an element. The .removeChild() method removes a specified child from a parent.
+                        <br><br>
+
+                        If you want to hide an element rather than completely deleting it, the .hidden property allows
+                        you to hide it by setting the property as true or false
+
+                    </p>
+
+                    <br><a href="#to-top">To Top</a>
+                </td>
+                <td class="code">
+                    <code>
                                                 let paragraph = document.querySelector('p'); <br>
                                                 document.body.removeChild(paragraph); <br><br>
 
                                                 document.getElementById('sign').hidden = true;
 
                                             </code>
-                                        
-                                        </td>
-                                        </tr>
 
-                                        <tr id="#on-click-interactivity">
-                                            <td class="description">
-                                            <h3>On Click interactivity</h3>
-                                            <p>
-                                                You can add interactivity to DOM elements by assigning a function to run based on an event. Events can include anything from a click to a user mousing over an element. We will learn more about events in the upcoming DOM Events with JavaScript lesson. For now, let’s take a look at how to modify an element when a click event happens.
+                </td>
+            </tr>
 
-                                                The .onclick property allows you to assign a function to run on when a click event happens on an element.
-                                            
-                                            </p>
-                                            
-                                            <br><a href="#to-top">To Top</a>
-                                            </td>
-                                            <td class="code">
-                                                <code>
+            <tr id="#on-click-interactivity">
+                <td class="description">
+                    <h3>On Click interactivity</h3>
+                    <p>
+                        You can add interactivity to DOM elements by assigning a function to run based on an event.
+                        Events can include anything from a click to a user mousing over an element. We will learn more
+                        about events in the upcoming DOM Events with JavaScript lesson. For now, let’s take a look at
+                        how to modify an element when a click event happens.
+
+                        The .onclick property allows you to assign a function to run on when a click event happens on an
+                        element.
+
+                    </p>
+
+                    <br><a href="#to-top">To Top</a>
+                </td>
+                <td class="code">
+                    <code>
                                                     let element = document.querySelector('button'); <br><br>
  
                                                     element.onclick = function() { <br>
@@ -3611,9 +3663,9 @@ grid-auto-rows: 50px; <br>
                                                     
                                                     element.onclick = turnBlue; <br>
                                                 </code>
-                                            
-                                            </td>
-                                            </tr>
+
+                </td>
+            </tr>
 
 
 
