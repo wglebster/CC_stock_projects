@@ -3667,6 +3667,397 @@ grid-auto-rows: 50px; <br>
                 </td>
             </tr>
 
+            <tr id="event-handler registration">
+                <td class="description">
+                    <h3>Event Handler Registration</h3>
+                    <p>
+                        Using the <code>.addEventListener()</code> method, we can have a DOM element listen for a
+                        specific event and execute a block of code when the event is detected. The DOM element that
+                        listens for an event is called the event target and the block of code that runs when the event
+                        happens is called the event handler. <br><br>
+                        In the example on the right:
+                    <ul>
+                        <li>We selected our event target from the DOM using
+                            <code>document.getElementById('targetElement')</code></li>
+                        <li>We used the <code>.addEventListener()</code> method on the <code>eventTarget</code> DOM
+                            element.</li>
+                        <li>The <code>.addEventListener()</code> method takes two arguments: an event name in string
+                            format and an event handler function.</li>
+                        <li>In this example, we used the 'click' event, which fires when the user clicks on eventTarget.
+                        </li>
+                        <li>The code block in the event handler function will execute when the 'click' event is
+                            detected.</li>
+                    </ul>
+
+                    Instead of using an anonymous function as the event handler, it’s best practice to create a named
+                    event handler function. Your code will remain organized and reusable this way, even if your code
+                    gets complex.
+                    </p>
+
+                    <br><a href="#to-top">To Top</a>
+                </td>
+                <td class="code">
+                    <code>
+                        using anonymous function: <br><br>
+                        let eventTarget = document.getElementById('targetElement'); <br><br>
+ 
+                        eventTarget.addEventListener('click', function() { <br>
+                        // this block of code will run when click event happens on eventTarget element <br>
+                        }); <br><br>
+<hr>
+                        using named function: <br><br>
+                        function eventHandlerFunction() { <br>
+                            // this block of code will run when click event happens <br>
+                          }
+                           
+                          eventTarget.addEventListener('click', eventHandlerFunction); <br><br>
+                    </code>
+
+                </td>
+            </tr>
+
+            <tr id="adding-event-handlers">
+                <td class="description">
+                    <h3>Adding Event Handlers</h3>
+                    <p>
+                        Event Handlers can also be registered by setting an <code>.onevent</code> property on a DOM
+                        element (event target). The pattern for registering a specific event is to append an element
+                        with <code>.on</code> followed by the lowercased event type name. <br><br>
+                        It’s important to know that this <code>.onevent</code> property and
+                        <code>.addEventListener()</code> will both register event listeners. With <code>.onevent</code>,
+                        it allows for one event handler function to be attached to the event target. However, with the
+                        <code>.addEventListener()</code> method , we can add multiple event handler functions.
+                    </p>
+
+                    <br><a href="#to-top">To Top</a>
+                </td>
+                <td class="code">
+                    <code>
+                            eventTarget.onclick = eventHandlerFunction; <br>
+                        </code>
+
+                </td>
+            </tr>
+
+            <tr id="remove-event-handlers">
+                <td class="description">
+                    <h3>Remove Event Handlers</h3>
+                    <p>
+                        The <code>.removeEventListener()</code> method is used to reverse the
+                        <code>.addEventListener()</code> method. This method stops the event target from “listening” for
+                        an event to fire when it no longer needs to. <code>.removeEventListener()</code> also takes two
+                        arguments:
+                    <ol>
+                        <li>The event type as a string</li>
+                        <li>The event handler function</li>
+                    </ol>
+
+                    Because there can be multiple event handler functions associated with a particular event,
+                    <code>.removeEventListener()</code> needs both the exact event type name and the name of the event
+                    handler you want to remove.<br> <strong> If <code>.addEventListener()</code> was provided an
+                        anonymous function, then that event listener cannot be removed.</strong>
+
+
+
+                    </p>
+
+                    <br><a href="#to-top">To Top</a>
+                </td>
+                <td class="code">
+                    <code>
+                                eventTarget.removeEventListener('click', eventHandlerFunction);
+                            </code>
+
+                </td>
+            </tr>
+
+            <tr id="event-object-properties">
+                <td class="description">
+                    <h3>Event Object Properties</h3>
+                    <p>
+                        JavaScript stores events as Event objects with their related data and functionalities as
+                        properties and methods. When an event is triggered, the event object can be passed as an
+                        argument to the event handler function. <br><br>
+
+                        <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/API/Event">Full list of
+                            all Event Object Properties</a>
+
+
+                    </p>
+
+                    <br><a href="#to-top">To Top</a>
+                </td>
+                <td class="code">
+                    <code>
+                                    function eventHandlerFunction(event){ <br>
+                                        console.log(event.timeStamp); <br>
+                                     } <br><br>
+                                      
+                                     eventTarget.addEventListener('click', eventHandlerFunction); <br>
+                                </code>
+
+                </td>
+            </tr>
+
+            <tr id="event-types">
+                <td class="description" colspan="2">
+                    <h3>Event Types</h3>
+                    <p>
+                        It’s important to know most events in the DOM take place without being noticed because there are
+                        no event handlers connected to them.
+
+                        It’s also important to know some registered events don’t depend on user interactions to fire.
+                        For instance, the load event fires after website files completely load in the browser.
+
+                        Browsers can fire many other events without a user — you can check out a list of events on the
+                        <a href="https://developer.mozilla.org/en-US/docs/Web/Events" target="_blank">MDN Events
+                            Reference page</a>. <br><br>
+
+                        Many events need user interaction with the DOM to fire
+                    </p>
+
+                    <br><a href="#to-top">To Top</a>
+                </td>
+                <td class="code">
+                    <code>
+
+                                    </code>
+
+                </td>
+            </tr>
+
+            <tr id="css-transitions">
+                <td class="description">
+                    <h3>CSS Transitions</h3>
+                    <p>
+                        After a website is displayed, the visual appearances of various elements can change for many
+                        reasons. For example: <br>
+
+                    <ul>
+                        <li>Moving your mouse over a link may change the color or appearance of that link.</li>
+                        <li>Changing the size of the window may change the layout.</li>
+                        <li>Scrolling causes some elements to disappear and others to appear.</li>
+                    </ul>
+
+                    With CSS transitions, we can control how these changes happen. <br><br>
+
+                    These changes are a type of state change. CSS transitions allow us to control the timing of visual
+                    state changes. We can control the following four aspects of an element’s transition: <br>
+                    <ul>
+                        <li>Which CSS properties transition</li>
+                        <li>How long a transition lasts</li>
+                        <li>How much time there is before a transition begins</li>
+                        <li>How a transition accelerates</li>
+                    </ul>
+
+                    </p>
+
+                    <br><a href="#to-top">To Top</a>
+                </td>
+                <td class="code">
+                    <code>
+                                            a { <br>
+                                                display: block; <br>
+                                                width: 300px; <br>
+                                                padding: 31px 5px; <br>
+                                                border-radius: 5px; <br>
+                                                margin: 20% auto; <br>
+                                                background-color: orange; <br>
+                                                text-align: center; <br>
+                                                font-family: Helvetica; <br>
+                                                font-size: 32px; <br>
+                                                color: mintcream; <br>
+                                                transition-property: background-color; <br>
+                                                transition-duration: 2s; <br>
+                                              } <br><br>
+                                              
+                                              a:hover { <br>
+                                                background-color: limegreen; <br>
+                                              } <br>
+                                            
+                                        </code>
+
+                </td>
+            </tr>
+
+            <tr id="css-transition-duration">
+                <td class="description">
+                    <h3>CSS Transition duration</h3>
+                    <p>
+                        To create a simple transition in CSS, we must specify two of the four aspects: <br>
+                    <ol>
+                        <li>The property that we want to transition.</li>
+                        <li>The duration of the transition.</li>
+                    </ol>
+
+                    In the example above, transition-property declares which CSS property we will be transitioning, the
+                    text color. The second property, transition-duration, declares how long the transition will take —
+                    one second. <br>
+
+                    Many properties’ state changes can be transitioned. The type of transition depends on the property
+                    you choose. For a complete list of all animated properties, <a
+                        href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_animated_properties">see this
+                        resource.</a> <br><br>
+                    Duration is specified in seconds or milliseconds, such as 3s, 0.75s, 500ms. The default value is 0s,
+                    or instantaneous, as if there is no transition.
+
+
+                    </p>
+
+                    <br><a href="#to-top">To Top</a>
+                </td>
+                <td class="code">
+                    <code>
+                                                a { <br><br>
+                                                transition-property: color; <br>
+                                                transition-duration: 1s; <br>
+                                                } <br>
+                                            </code>
+
+                </td>
+            </tr>
+
+            <tr id="css-transition-timing-function">
+                <td class="description">
+                <h3>CSS Transition Function</h3>
+                <p>
+                    The timing function describes the pace of the transition. <br>
+
+                    The default value is ease, which starts the transition slowly, speeds up in the middle, and slows down again at the end. <br>
+
+                    Other valid values include: <br>
+                    <ul>
+                        <li>ease-in — starts slow, accelerates quickly, stops abruptly</li>
+                        <li>ease-out — begins abruptly, slows down, and ends slowly</li>
+                        <li>ease-in-out — starts slow, gets fast in the middle, and ends slowly</li>
+                        <li>linear — constant speed throughout</li>
+                    </ul>
+                    The full list of the possible transition timing function properties, can be foung <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/transition-timing-function">here</a> on Mozilla Developer Network.
+
+
+                </p>
+                
+                <br><a href="#to-top">To Top</a>
+                </td>
+                <td class="code">
+                    <code>
+                        transition-property: color; <br>
+                        transition-duration: 1s; <br>
+                        transition-timing-function: ease-out; <br>
+                    </code>
+                
+                </td>
+                </tr>
+
+                <tr id="css-transition-delay">
+                    <td class="description">
+                    <h3>CSS Transition Delay</h3>
+                    <p>
+                        One more transition property is transition-delay. Much like duration, its value is an amount of time. Delay specifies the time to wait before starting the transition. As with the duration property, the default value for transition-delay is 0s, which means no delay. <br>
+
+                    </p>
+                    
+                    <br><a href="#to-top">To Top</a>
+                    </td>
+                    <td class="code">
+                        <code>
+                            transition-property: width; <br>
+                            transition-duration: 750ms; <br>
+                            transition-delay: 250ms; <br>
+                        </code>
+                    
+                    </td>
+                    </tr>
+
+                    <tr id="css-transition-shorthand">
+                        <td class="description">
+                        <h3>CSS Transition shorthand</h3>
+                        <p>
+                            Now that we’ve explored each transition property, you may find yourself with many CSS rule sets that look like the code below.                        <br><br>
+                            Because these four properties are so frequently declared together, CSS provides a property that can be used to declare them all in one line: transition. This shorthand property describes each aspect of the transition puzzle in a single declaration. The properties must be specified in this order: transition-property, transition-duration, transition-timing-function, transition-delay.
+                            <br>
+                            In the example, we have refactored the four lines of code in the previous example into one concise line. This example will cause any change in text color to transition at constant speed over 1.5 seconds, after a delay of 0.5 seconds.
+
+                            Leaving out one of the properties causes the default value for that property to be applied. There is one exception: You must set duration if you want to define delay. Since both are time values, the browser will always interpret the first time value it sees as duration.
+                        </p>
+                        
+                        <br><a href="#to-top">To Top</a>
+                        </td>
+                        <td class="code">
+                            <code>
+                                transition-property: color; <br>
+                                transition-duration: 1.5s; <br>
+                                transition-timing-function: linear; <br>
+                                transition-delay: 0.5s; <br><br>
+                                is same as: <br><br>
+                                transition: color 1.5s linear 0.5s;
+                                 
+                                
+                            </code>
+                        
+                        </td>
+                        </tr>
+
+                        <tr id="css-transition-combinations">
+                            <td class="description">
+                            <h3>CSS Transition combinations</h3>
+                            <p>
+                                The shorthand transition rule has one advantage over the set of separate transition-<property> rules: you can describe unique transitions for multiple properties, and combine them. <br>
+
+                                To combine transitions, add a comma (,) before the semicolon (;) in your rule. After the comma, use the same shorthand syntax. <br><br>      
+                                
+                                The example code transitions two properties at once. The text color transitions over one second with linear timing and no delay. At the same time, the font size transitions over 750 milliseconds with an ease-in timing and a 100 millisecond delay. This “chaining” is a powerful tool for expressing complicated animations.
+                            </p>
+                            
+                            <br><a href="#to-top">To Top</a>
+                            </td>
+                            <td class="code">
+                                <code>
+                                    transition: color 1s linear, <br>
+                                    font-size 750ms ease-in 100ms; <br>
+                                </code>
+                            
+                            </td>
+                            </tr>
+
+                            <tr id="css-transitions-all">
+                                <td class="description">
+                                <h3>CSS Transitions ALL</h3>
+                                <p>
+                                    Even with the shorthand, specifying transitions for many properties can be tedious. It is common to use the same duration, timing function, and delay for multiple properties. When this is the case you can set the transition-property value to all. This will apply the same values to all properties. To effect this, you can use all as a value for transition-property. <br><br>
+
+                                    all means every value that changes will be transitioned in the same way. You can use all with the separate transition properties, or the shorthand syntax. This allows you to describe the transition of many properties with a single line:                                
+                                </p>
+                                
+                                <br><a href="#to-top">To Top</a>
+                                </td>
+                                <td class="code">
+                                    <code>
+                                        transition: all 1.5s linear 0.5s;
+                                    </code>
+                                
+                                </td>
+                                </tr>
+
+                                <tr id="css-animations">
+                                    <td class="description" colspan="2">
+                                    <h3>CSS Animations</h3>
+                                    <p>
+                                        Introduction to CSS Animations can be found <a href="https://thoughtbot.com/blog/css-animation-for-beginners">here.</a>                                    
+                                    </p>
+                                    
+                                    <br><a href="#to-top">To Top</a>
+                                    </td>
+                                    <td class="code">
+                                        <code>
+                                            
+                                        </code>
+                                    
+                                    </td>
+                                    </tr>
+
+
+
 
 
 
