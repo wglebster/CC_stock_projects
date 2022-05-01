@@ -60,9 +60,7 @@ caption {
 .sidenav ul:hover li{
     display: block;
 }
-.collapsible{
-    cursor: pointer;
-}
+
 
 th {
     border: #9ea3a0 0.5px solid;
